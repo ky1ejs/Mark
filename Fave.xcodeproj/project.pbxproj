@@ -13,6 +13,7 @@
 		AFBA98DB1AA9DE3C004DF771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */; };
 		AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */; };
 		AFBA98EA1AA9DE3D004DF771 /* FaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */; };
+		AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		AFBA98E31AA9DE3D004DF771 /* FaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA98E81AA9DE3D004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTests.swift; sourceTree = "<group>"; };
+		AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */,
 				AFBA98D51AA9DE3C004DF771 /* ViewController.swift */,
+				AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */,
 				AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */,
 				AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */,
 				AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */,
@@ -213,6 +216,7 @@
 			files = (
 				AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */,
 				AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */,
+				AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */,
 				AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

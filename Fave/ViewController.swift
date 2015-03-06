@@ -8,12 +8,17 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+    var urls : NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let fetch = NSFetchRequest(entityName: "URL");
+        var error : NSError?
+        let result = AppDelegate.context().executeFetchRequest(fetch, error: &error)
+        if (error == nil) {
+            urls = result
+        }
     }
 
     override var representedObject: AnyObject? {
@@ -21,7 +26,10 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
+    
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return urls.count
+    }
 
 }
 

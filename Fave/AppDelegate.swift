@@ -91,6 +91,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
+    
+    class func context() -> NSManagedObjectContext {
+        let del = NSApplication.sharedApplication().delegate as AppDelegate
+        return del.managedObjectContext!;
+    }
 
     // MARK: - Core Data Saving and Undo support
 
