@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		AFBA98F51AA9E529004DF771 /* Mogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AFBA98F61AA9E529004DF771 /* Build configuration list for PBXAggregateTarget "Mogen" */;
+			buildPhases = (
+				AFBA98F91AA9E547004DF771 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogen;
+			productName = Mogen;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */; };
 		AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D51AA9DE3C004DF771 /* ViewController.swift */; };
@@ -14,6 +28,8 @@
 		AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */; };
 		AFBA98EA1AA9DE3D004DF771 /* FaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */; };
 		AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */; };
+		AFBA98FD1AA9E6FC004DF771 /* _FVURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */; };
+		AFBA98FE1AA9E6FC004DF771 /* FVURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +54,8 @@
 		AFBA98E81AA9DE3D004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTests.swift; sourceTree = "<group>"; };
 		AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
+		AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _FVURL.swift; sourceTree = "<group>"; };
+		AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FVURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +103,7 @@
 				AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */,
 				AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */,
 				AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */,
+				AFBA98FA1AA9E6FC004DF771 /* Core Data Models */,
 				AFBA98D11AA9DE3C004DF771 /* Supporting Files */,
 			);
 			path = Fave;
@@ -113,6 +132,15 @@
 				AFBA98E81AA9DE3D004DF771 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFBA98FA1AA9E6FC004DF771 /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */,
+				AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */,
+			);
+			path = "Core Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +197,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = AFBA98CD1AA9DE3C004DF771;
 					};
+					AFBA98F51AA9E529004DF771 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = AFBA98C91AA9DE3C004DF771 /* Build configuration list for PBXProject "Fave" */;
@@ -186,6 +217,7 @@
 			targets = (
 				AFBA98CD1AA9DE3C004DF771 /* Fave */,
 				AFBA98E21AA9DE3D004DF771 /* FaveTests */,
+				AFBA98F51AA9E529004DF771 /* Mogen */,
 			);
 		};
 /* End PBXProject section */
@@ -209,13 +241,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AFBA98F91AA9E547004DF771 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Fave/Fave.xcdatamodeld/Fave.xcdatamodel -O Fave/Core\\ Data\\ Models --swift --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFBA98CA1AA9DE3C004DF771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */,
+				AFBA98FE1AA9E6FC004DF771 /* FVURL.swift in Sources */,
 				AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */,
+				AFBA98FD1AA9E6FC004DF771 /* _FVURL.swift in Sources */,
 				AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */,
 				AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */,
 			);
@@ -386,6 +436,20 @@
 			};
 			name = Release;
 		};
+		AFBA98F71AA9E529004DF771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AFBA98F81AA9E529004DF771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +475,14 @@
 			buildConfigurations = (
 				AFBA98F11AA9DE3D004DF771 /* Debug */,
 				AFBA98F21AA9DE3D004DF771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFBA98F61AA9E529004DF771 /* Build configuration list for PBXAggregateTarget "Mogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFBA98F71AA9E529004DF771 /* Debug */,
+				AFBA98F81AA9E529004DF771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

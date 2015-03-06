@@ -10,15 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     var urls : NSArray!
+    @IBOutlet var tableView : NSTableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fetch = NSFetchRequest(entityName: "URL");
-        var error : NSError?
-        let result = AppDelegate.context().executeFetchRequest(fetch, error: &error)
-        if (error == nil) {
-            urls = result
-        }
+        fetch()
     }
 
     override var representedObject: AnyObject? {
@@ -29,6 +25,38 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return urls.count
+    }
+    
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        let url = urls.objectAtIndex(row) as FVURL
+        let ident = tableColumn?.identifier as String!
+        var string : NSString?
+        switch ident {
+        case "URL":
+            string = url.url
+            break
+        case "Comment":
+            string = url.comment
+            break
+        default:
+            break
+        }
+        return string
+    }
+    
+    func fetch() {
+        var error : NSError?
+        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: FVURL.entityName()), error: &error)
+        if (error == nil) {
+            self.urls = result
+            print(result!.count)
+        }
+    }
+    
+    
+    @IBAction func reload(sender: NSButton) {
+        fetch()
+        self.tableView.reloadData()
     }
 
 }

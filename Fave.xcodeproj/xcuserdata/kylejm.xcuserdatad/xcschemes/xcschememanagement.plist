@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Mogen.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>AFBA98E21AA9DE3D004DF771</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFBA98F51AA9E529004DF771</key>
 		<dict>
 			<key>primary</key>
 			<true/>
