@@ -10,20 +10,19 @@ import Cocoa
 
 class AddEditURLViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     var urls : NSArray!
+    @IBOutlet var titleTF : NSTextField!
     @IBOutlet var urlTF : NSTextField!
-    @IBOutlet var commentTF : NSTextField!
     
     override func viewDidLoad() {
         
     }
     
     @IBAction func save(sender: NSButton) {
-        let url = FVURL(managedObjectContext: AppDelegate.context())
-        url.url = urlTF.stringValue
-        url.comment = commentTF.stringValue
+        let url = SavedURL(managedObjectContext: AppDelegate.context())
+        url.title = self.titleTF.stringValue
+        url.url = self.urlTF.stringValue
         var error : NSError?
         AppDelegate.context().save(&error)
-        print(error)
     }
     
 }

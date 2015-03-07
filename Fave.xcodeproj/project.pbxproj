@@ -28,8 +28,11 @@
 		AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */; };
 		AFBA98EA1AA9DE3D004DF771 /* FaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */; };
 		AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */; };
-		AFBA98FD1AA9E6FC004DF771 /* _FVURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */; };
-		AFBA98FE1AA9E6FC004DF771 /* FVURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */; };
+		AFBA99011AAA5520004DF771 /* _SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */; };
+		AFBA99021AAA5520004DF771 /* SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99001AAA5520004DF771 /* SavedURL.swift */; };
+		AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99031AAA55F6004DF771 /* _Category.swift */; };
+		AFBA99061AAA55F6004DF771 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99041AAA55F6004DF771 /* Category.swift */; };
+		AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,11 @@
 		AFBA98E81AA9DE3D004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTests.swift; sourceTree = "<group>"; };
 		AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
-		AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _FVURL.swift; sourceTree = "<group>"; };
-		AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FVURL.swift; sourceTree = "<group>"; };
+		AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SavedURL.swift; sourceTree = "<group>"; };
+		AFBA99001AAA5520004DF771 /* SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURL.swift; sourceTree = "<group>"; };
+		AFBA99031AAA55F6004DF771 /* _Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Category.swift; sourceTree = "<group>"; };
+		AFBA99041AAA55F6004DF771 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURLCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */,
 				AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */,
 				AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */,
+				AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */,
 				AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */,
 				AFBA98FA1AA9E6FC004DF771 /* Core Data Models */,
 				AFBA98D11AA9DE3C004DF771 /* Supporting Files */,
@@ -137,8 +144,10 @@
 		AFBA98FA1AA9E6FC004DF771 /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFBA98FB1AA9E6FC004DF771 /* _FVURL.swift */,
-				AFBA98FC1AA9E6FC004DF771 /* FVURL.swift */,
+				AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */,
+				AFBA99001AAA5520004DF771 /* SavedURL.swift */,
+				AFBA99031AAA55F6004DF771 /* _Category.swift */,
+				AFBA99041AAA55F6004DF771 /* Category.swift */,
 			);
 			path = "Core Data Models";
 			sourceTree = "<group>";
@@ -263,11 +272,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */,
-				AFBA98FE1AA9E6FC004DF771 /* FVURL.swift in Sources */,
 				AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */,
-				AFBA98FD1AA9E6FC004DF771 /* _FVURL.swift in Sources */,
+				AFBA99011AAA5520004DF771 /* _SavedURL.swift in Sources */,
 				AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */,
 				AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */,
+				AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */,
+				AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */,
+				AFBA99021AAA5520004DF771 /* SavedURL.swift in Sources */,
+				AFBA99061AAA55F6004DF771 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

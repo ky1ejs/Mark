@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="URL" representedClassName="FVURL" syncable="YES">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="urls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedURL" inverseName="categories" inverseEntity="SavedURL" syncable="YES"/>
+    </entity>
+    <entity name="SavedURL" representedClassName="SavedURL" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="urls" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="URL" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="SavedURL" positionX="-3242" positionY="-999" width="128" height="118"/>
+        <element name="Category" positionX="-2990" positionY="-963" width="128" height="73"/>
     </elements>
 </model>

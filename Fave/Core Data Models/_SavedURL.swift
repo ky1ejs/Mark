@@ -1,21 +1,26 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to FVURL.swift instead.
+// Make changes to SavedURL.swift instead.
 
 import CoreData
 
-enum FVURLAttributes: String {
+enum SavedURLAttributes: String {
     case comment = "comment"
     case rating = "rating"
+    case title = "title"
     case url = "url"
 }
 
+enum SavedURLRelationships: String {
+    case categories = "categories"
+}
+
 @objc
-class _FVURL: NSManagedObject {
+class _SavedURL: NSManagedObject {
 
     // MARK: - Class methods
 
     class func entityName () -> String {
-        return "URL"
+        return "SavedURL"
     }
 
     class func entity(managedObjectContext: NSManagedObjectContext!) -> NSEntityDescription! {
@@ -29,7 +34,7 @@ class _FVURL: NSManagedObject {
     }
 
     convenience init(managedObjectContext: NSManagedObjectContext!) {
-        let entity = _FVURL.entity(managedObjectContext)
+        let entity = _SavedURL.entity(managedObjectContext)
         self.init(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
     }
 
@@ -46,11 +51,46 @@ class _FVURL: NSManagedObject {
     // func validateRating(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
+    var title: String?
+
+    // func validateTitle(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
+
+    @NSManaged
     var url: String?
 
     // func validateUrl(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     // MARK: - Relationships
 
+    @NSManaged
+    var categories: NSSet
+
 }
 
+extension _SavedURL {
+
+    func addCategories(objects: NSSet) {
+        let mutable = self.categories.mutableCopy() as NSMutableSet
+        mutable.unionSet(objects)
+        self.categories = mutable.copy() as NSSet
+    }
+
+    func removeCategories(objects: NSSet) {
+        let mutable = self.categories.mutableCopy() as NSMutableSet
+        mutable.minusSet(objects)
+        self.categories = mutable.copy() as NSSet
+    }
+
+    func addCategoriesObject(value: Category!) {
+        let mutable = self.categories.mutableCopy() as NSMutableSet
+        mutable.addObject(value)
+        self.categories = mutable.copy() as NSSet
+    }
+
+    func removeCategoriesObject(value: Category!) {
+        let mutable = self.categories.mutableCopy() as NSMutableSet
+        mutable.removeObject(value)
+        self.categories = mutable.copy() as NSSet
+    }
+
+}

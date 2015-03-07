@@ -14,6 +14,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 60
         fetch()
     }
 
@@ -24,33 +25,28 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return urls.count
+        return (self.urls != nil) ? urls.count : 0
     }
     
-    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-        let url = urls.objectAtIndex(row) as FVURL
-        let ident = tableColumn?.identifier as String!
-        var string : NSString?
-        switch ident {
-        case "URL":
-            string = url.url
-            break
-        case "Comment":
-            string = url.comment
-            break
-        default:
-            break
-        }
-        return string
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let url = urls.objectAtIndex(row) as SavedURL
+        let cell = tableView.makeViewWithIdentifier("SavedURLCell", owner: self) as SavedURLCell
+        cell.textField?.stringValue = url.title!
+        cell.urlTextField.stringValue = url.url!
+        return cell
     }
     
     func fetch() {
         var error : NSError?
-        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: FVURL.entityName()), error: &error)
+        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: SavedURL.entityName()), error: &error)
         if (error == nil) {
             self.urls = result
             print(result!.count)
         }
+    }
+    
+    func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 60
     }
     
     
