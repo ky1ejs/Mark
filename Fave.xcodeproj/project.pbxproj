@@ -22,7 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */; };
-		AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D51AA9DE3C004DF771 /* ViewController.swift */; };
+		AFBA98D61AA9DE3C004DF771 /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */; };
 		AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */; };
 		AFBA98DB1AA9DE3C004DF771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */; };
 		AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */; };
@@ -33,6 +33,7 @@
 		AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99031AAA55F6004DF771 /* _Category.swift */; };
 		AFBA99061AAA55F6004DF771 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99041AAA55F6004DF771 /* Category.swift */; };
 		AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */; };
+		AFF4805B1AB84C9D00F8E01B /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,7 @@
 		AFBA98CE1AA9DE3C004DF771 /* Fave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA98D21AA9DE3C004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFBA98D51AA9DE3C004DF771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTableViewController.swift; sourceTree = "<group>"; };
 		AFBA98D81AA9DE3C004DF771 /* Fave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fave.xcdatamodel; sourceTree = "<group>"; };
 		AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFBA98DD1AA9DE3C004DF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		AFBA99031AAA55F6004DF771 /* _Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Category.swift; sourceTree = "<group>"; };
 		AFBA99041AAA55F6004DF771 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURLCell.swift; sourceTree = "<group>"; };
+		AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */,
-				AFBA98D51AA9DE3C004DF771 /* ViewController.swift */,
+				AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */,
+				AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */,
 				AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */,
 				AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */,
 				AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */,
@@ -271,11 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBA98D61AA9DE3C004DF771 /* ViewController.swift in Sources */,
+				AFBA98D61AA9DE3C004DF771 /* URLTableViewController.swift in Sources */,
 				AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */,
 				AFBA99011AAA5520004DF771 /* _SavedURL.swift in Sources */,
 				AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */,
 				AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */,
+				AFF4805B1AB84C9D00F8E01B /* SplitVC.swift in Sources */,
 				AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */,
 				AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */,
 				AFBA99021AAA5520004DF771 /* SavedURL.swift in Sources */,
@@ -481,6 +485,7 @@
 				AFBA98EF1AA9DE3D004DF771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFBA98F01AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "FaveTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				AFBA98F21AA9DE3D004DF771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFBA98F61AA9E529004DF771 /* Build configuration list for PBXAggregateTarget "Mogen" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				AFBA98F81AA9E529004DF771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
