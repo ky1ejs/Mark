@@ -1,6 +1,6 @@
 //
-//  FaveTests.swift
-//  FaveTests
+//  MarkTests.swift
+//  MarkTests
 //
 //  Created by Kyle McAlpine on 06/03/2015.
 //  Copyright (c) 2015 kylejm. All rights reserved.
@@ -9,7 +9,7 @@
 import Cocoa
 import XCTest
 
-class FaveTests: XCTestCase {
+class MarkTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

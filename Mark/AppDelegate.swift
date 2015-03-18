@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Fave
+//  Mark
 //
 //  Created by Kyle McAlpine on 06/03/2015.
 //  Copyright (c) 2015 kylejm. All rights reserved.
@@ -24,15 +24,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "io.kylejm.Fave" in the user's Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "io.kylejm.Mark" in the user's Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
         let appSupportURL = urls[urls.count - 1] as NSURL
-        return appSupportURL.URLByAppendingPathComponent("io.kylejm.Fave")
+        return appSupportURL.URLByAppendingPathComponent("io.kylejm.Mark")
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("Fave", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("Mark", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var coordinator: NSPersistentStoreCoordinator?
         if !shouldFail && (error == nil) {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Fave.storedata")
+            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Mark.storedata")
             if coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
                 coordinator = nil
             }

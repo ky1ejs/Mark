@@ -21,19 +21,21 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */; };
-		AFBA98D61AA9DE3C004DF771 /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */; };
-		AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */; };
-		AFBA98DB1AA9DE3C004DF771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */; };
-		AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */; };
-		AFBA98EA1AA9DE3D004DF771 /* FaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */; };
-		AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */; };
-		AFBA99011AAA5520004DF771 /* _SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */; };
-		AFBA99021AAA5520004DF771 /* SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99001AAA5520004DF771 /* SavedURL.swift */; };
-		AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99031AAA55F6004DF771 /* _Category.swift */; };
-		AFBA99061AAA55F6004DF771 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99041AAA55F6004DF771 /* Category.swift */; };
-		AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */; };
-		AFF4805B1AB84C9D00F8E01B /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */; };
+		AFF480701ABA068D00F8E01B /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */; };
+		AFF480711ABA068D00F8E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */; };
+		AFF480721ABA068D00F8E01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF4805F1ABA068D00F8E01B /* Main.storyboard */; };
+		AFF480731ABA068D00F8E01B /* _Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480621ABA068D00F8E01B /* _Category.swift */; };
+		AFF480741ABA068D00F8E01B /* _SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480631ABA068D00F8E01B /* _SavedURL.swift */; };
+		AFF480751ABA068D00F8E01B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480641ABA068D00F8E01B /* Category.swift */; };
+		AFF480761ABA068D00F8E01B /* SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480651ABA068D00F8E01B /* SavedURL.swift */; };
+		AFF480771ABA068D00F8E01B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF480661ABA068D00F8E01B /* Images.xcassets */; };
+		AFF480781ABA068D00F8E01B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF480671ABA068D00F8E01B /* Info.plist */; };
+		AFF480791ABA068D00F8E01B /* Mark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */; };
+		AFF4807A1ABA068D00F8E01B /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */; };
+		AFF4807B1ABA068D00F8E01B /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806B1ABA068D00F8E01B /* SplitVC.swift */; };
+		AFF4807C1ABA068D00F8E01B /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */; };
+		AFF4807D1ABA068D00F8E01B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF4806E1ABA068D00F8E01B /* Info.plist */; };
+		AFF4807F1ABA069600F8E01B /* MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806F1ABA068D00F8E01B /* MarkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,23 +49,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AFBA98CE1AA9DE3C004DF771 /* Fave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fave.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFBA98D21AA9DE3C004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTableViewController.swift; sourceTree = "<group>"; };
-		AFBA98D81AA9DE3C004DF771 /* Fave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fave.xcdatamodel; sourceTree = "<group>"; };
-		AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AFBA98DD1AA9DE3C004DF771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFBA98E31AA9DE3D004DF771 /* FaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFBA98E81AA9DE3D004DF771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveTests.swift; sourceTree = "<group>"; };
-		AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
-		AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SavedURL.swift; sourceTree = "<group>"; };
-		AFBA99001AAA5520004DF771 /* SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURL.swift; sourceTree = "<group>"; };
-		AFBA99031AAA55F6004DF771 /* _Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Category.swift; sourceTree = "<group>"; };
-		AFBA99041AAA55F6004DF771 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURLCell.swift; sourceTree = "<group>"; };
-		AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
+		AFBA98CE1AA9DE3C004DF771 /* Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFBA98E31AA9DE3D004DF771 /* MarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
+		AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFF480601ABA068D00F8E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF480621ABA068D00F8E01B /* _Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Category.swift; sourceTree = "<group>"; };
+		AFF480631ABA068D00F8E01B /* _SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SavedURL.swift; sourceTree = "<group>"; };
+		AFF480641ABA068D00F8E01B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AFF480651ABA068D00F8E01B /* SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURL.swift; sourceTree = "<group>"; };
+		AFF480661ABA068D00F8E01B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFF480671ABA068D00F8E01B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fave.xcdatamodel; sourceTree = "<group>"; };
+		AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURLCell.swift; sourceTree = "<group>"; };
+		AFF4806B1ABA068D00F8E01B /* SplitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
+		AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTableViewController.swift; sourceTree = "<group>"; };
+		AFF4806E1ABA068D00F8E01B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF4806F1ABA068D00F8E01B /* MarkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,8 @@
 		AFBA98C51AA9DE3C004DF771 = {
 			isa = PBXGroup;
 			children = (
-				AFBA98D01AA9DE3C004DF771 /* Fave */,
-				AFBA98E61AA9DE3D004DF771 /* FaveTests */,
+				AFF4805C1ABA068D00F8E01B /* Mark */,
+				AFF4806D1ABA068D00F8E01B /* MarkTests */,
 				AFBA98CF1AA9DE3C004DF771 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,71 +98,55 @@
 		AFBA98CF1AA9DE3C004DF771 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFBA98CE1AA9DE3C004DF771 /* Fave.app */,
-				AFBA98E31AA9DE3D004DF771 /* FaveTests.xctest */,
+				AFBA98CE1AA9DE3C004DF771 /* Mark.app */,
+				AFBA98E31AA9DE3D004DF771 /* MarkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFBA98D01AA9DE3C004DF771 /* Fave */ = {
+		AFF4805C1ABA068D00F8E01B /* Mark */ = {
 			isa = PBXGroup;
 			children = (
-				AFBA98D31AA9DE3C004DF771 /* AppDelegate.swift */,
-				AFBA98D51AA9DE3C004DF771 /* URLTableViewController.swift */,
-				AFF4805A1AB84C9D00F8E01B /* SplitVC.swift */,
-				AFBA98F31AA9E423004DF771 /* AddEditURLViewController.swift */,
-				AFBA98DA1AA9DE3C004DF771 /* Images.xcassets */,
-				AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */,
-				AFBA99071AAB22E9004DF771 /* SavedURLCell.swift */,
-				AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */,
-				AFBA98FA1AA9E6FC004DF771 /* Core Data Models */,
-				AFBA98D11AA9DE3C004DF771 /* Supporting Files */,
+				AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */,
+				AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */,
+				AFF4805F1ABA068D00F8E01B /* Main.storyboard */,
+				AFF480611ABA068D00F8E01B /* Core Data Models */,
+				AFF480661ABA068D00F8E01B /* Images.xcassets */,
+				AFF480671ABA068D00F8E01B /* Info.plist */,
+				AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */,
+				AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */,
+				AFF4806B1ABA068D00F8E01B /* SplitVC.swift */,
+				AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */,
 			);
-			path = Fave;
+			path = Mark;
 			sourceTree = "<group>";
 		};
-		AFBA98D11AA9DE3C004DF771 /* Supporting Files */ = {
+		AFF480611ABA068D00F8E01B /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFBA98D21AA9DE3C004DF771 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AFBA98E61AA9DE3D004DF771 /* FaveTests */ = {
-			isa = PBXGroup;
-			children = (
-				AFBA98E91AA9DE3D004DF771 /* FaveTests.swift */,
-				AFBA98E71AA9DE3D004DF771 /* Supporting Files */,
-			);
-			path = FaveTests;
-			sourceTree = "<group>";
-		};
-		AFBA98E71AA9DE3D004DF771 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFBA98E81AA9DE3D004DF771 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AFBA98FA1AA9E6FC004DF771 /* Core Data Models */ = {
-			isa = PBXGroup;
-			children = (
-				AFBA98FF1AAA5520004DF771 /* _SavedURL.swift */,
-				AFBA99001AAA5520004DF771 /* SavedURL.swift */,
-				AFBA99031AAA55F6004DF771 /* _Category.swift */,
-				AFBA99041AAA55F6004DF771 /* Category.swift */,
+				AFF480621ABA068D00F8E01B /* _Category.swift */,
+				AFF480631ABA068D00F8E01B /* _SavedURL.swift */,
+				AFF480641ABA068D00F8E01B /* Category.swift */,
+				AFF480651ABA068D00F8E01B /* SavedURL.swift */,
 			);
 			path = "Core Data Models";
+			sourceTree = "<group>";
+		};
+		AFF4806D1ABA068D00F8E01B /* MarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4806E1ABA068D00F8E01B /* Info.plist */,
+				AFF4806F1ABA068D00F8E01B /* MarkTests.swift */,
+			);
+			path = MarkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFBA98CD1AA9DE3C004DF771 /* Fave */ = {
+		AFBA98CD1AA9DE3C004DF771 /* Mark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFBA98ED1AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "Fave" */;
+			buildConfigurationList = AFBA98ED1AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "Mark" */;
 			buildPhases = (
 				AFBA98CA1AA9DE3C004DF771 /* Sources */,
 				AFBA98CB1AA9DE3C004DF771 /* Frameworks */,
@@ -170,14 +156,14 @@
 			);
 			dependencies = (
 			);
-			name = Fave;
+			name = Mark;
 			productName = Fave;
-			productReference = AFBA98CE1AA9DE3C004DF771 /* Fave.app */;
+			productReference = AFBA98CE1AA9DE3C004DF771 /* Mark.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFBA98E21AA9DE3D004DF771 /* FaveTests */ = {
+		AFBA98E21AA9DE3D004DF771 /* MarkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFBA98F01AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "FaveTests" */;
+			buildConfigurationList = AFBA98F01AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "MarkTests" */;
 			buildPhases = (
 				AFBA98DF1AA9DE3D004DF771 /* Sources */,
 				AFBA98E01AA9DE3D004DF771 /* Frameworks */,
@@ -188,9 +174,9 @@
 			dependencies = (
 				AFBA98E51AA9DE3D004DF771 /* PBXTargetDependency */,
 			);
-			name = FaveTests;
+			name = MarkTests;
 			productName = FaveTests;
-			productReference = AFBA98E31AA9DE3D004DF771 /* FaveTests.xctest */;
+			productReference = AFBA98E31AA9DE3D004DF771 /* MarkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AFBA98C91AA9DE3C004DF771 /* Build configuration list for PBXProject "Fave" */;
+			buildConfigurationList = AFBA98C91AA9DE3C004DF771 /* Build configuration list for PBXProject "Mark" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFBA98CD1AA9DE3C004DF771 /* Fave */,
-				AFBA98E21AA9DE3D004DF771 /* FaveTests */,
+				AFBA98CD1AA9DE3C004DF771 /* Mark */,
+				AFBA98E21AA9DE3D004DF771 /* MarkTests */,
 				AFBA98F51AA9E529004DF771 /* Mogen */,
 			);
 		};
@@ -239,8 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBA98DB1AA9DE3C004DF771 /* Images.xcassets in Resources */,
-				AFBA98DE1AA9DE3C004DF771 /* Main.storyboard in Resources */,
+				AFF4807D1ABA068D00F8E01B /* Info.plist in Resources */,
+				AFF480721ABA068D00F8E01B /* Main.storyboard in Resources */,
+				AFF480771ABA068D00F8E01B /* Images.xcassets in Resources */,
+				AFF480781ABA068D00F8E01B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mogenerator -m Fave/Fave.xcdatamodeld/Fave.xcdatamodel -O Fave/Core\\ Data\\ Models --swift --template-var arc=true";
+			shellScript = "mogenerator -m Mark/Mark.xcdatamodeld/Mark.xcdatamodel -O Mark/Core\\ Data\\ Models --swift --template-var arc=true";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -274,16 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBA98D61AA9DE3C004DF771 /* URLTableViewController.swift in Sources */,
-				AFBA98D41AA9DE3C004DF771 /* AppDelegate.swift in Sources */,
-				AFBA99011AAA5520004DF771 /* _SavedURL.swift in Sources */,
-				AFBA98F41AA9E423004DF771 /* AddEditURLViewController.swift in Sources */,
-				AFBA98D91AA9DE3C004DF771 /* Fave.xcdatamodeld in Sources */,
-				AFF4805B1AB84C9D00F8E01B /* SplitVC.swift in Sources */,
-				AFBA99081AAB22E9004DF771 /* SavedURLCell.swift in Sources */,
-				AFBA99051AAA55F6004DF771 /* _Category.swift in Sources */,
-				AFBA99021AAA5520004DF771 /* SavedURL.swift in Sources */,
-				AFBA99061AAA55F6004DF771 /* Category.swift in Sources */,
+				AFF480711ABA068D00F8E01B /* AppDelegate.swift in Sources */,
+				AFF480751ABA068D00F8E01B /* Category.swift in Sources */,
+				AFF480731ABA068D00F8E01B /* _Category.swift in Sources */,
+				AFF4807A1ABA068D00F8E01B /* SavedURLCell.swift in Sources */,
+				AFF480761ABA068D00F8E01B /* SavedURL.swift in Sources */,
+				AFF480701ABA068D00F8E01B /* AddEditURLViewController.swift in Sources */,
+				AFF480741ABA068D00F8E01B /* _SavedURL.swift in Sources */,
+				AFF4807B1ABA068D00F8E01B /* SplitVC.swift in Sources */,
+				AFF480791ABA068D00F8E01B /* Mark.xcdatamodeld in Sources */,
+				AFF4807C1ABA068D00F8E01B /* URLTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBA98EA1AA9DE3D004DF771 /* FaveTests.swift in Sources */,
+				AFF4807F1ABA069600F8E01B /* MarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,16 +288,16 @@
 /* Begin PBXTargetDependency section */
 		AFBA98E51AA9DE3D004DF771 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AFBA98CD1AA9DE3C004DF771 /* Fave */;
+			target = AFBA98CD1AA9DE3C004DF771 /* Mark */;
 			targetProxy = AFBA98E41AA9DE3D004DF771 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFBA98DC1AA9DE3C004DF771 /* Main.storyboard */ = {
+		AFF4805F1ABA068D00F8E01B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFBA98DD1AA9DE3C004DF771 /* Base */,
+				AFF480601ABA068D00F8E01B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -399,9 +387,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Fave/Info.plist;
+				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mark;
 			};
 			name = Debug;
 		};
@@ -410,9 +398,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Fave/Info.plist;
+				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mark;
 			};
 			name = Release;
 		};
@@ -429,10 +417,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = FaveTests/Info.plist;
+				INFOPLIST_FILE = MarkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fave.app/Contents/MacOS/Fave";
+				PRODUCT_NAME = MarkTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mark.app/Contents/MacOS/Mark";
 			};
 			name = Debug;
 		};
@@ -445,10 +433,10 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = FaveTests/Info.plist;
+				INFOPLIST_FILE = MarkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fave.app/Contents/MacOS/Fave";
+				PRODUCT_NAME = MarkTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mark.app/Contents/MacOS/Mark";
 			};
 			name = Release;
 		};
@@ -469,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFBA98C91AA9DE3C004DF771 /* Build configuration list for PBXProject "Fave" */ = {
+		AFBA98C91AA9DE3C004DF771 /* Build configuration list for PBXProject "Mark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFBA98EB1AA9DE3D004DF771 /* Debug */,
@@ -478,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFBA98ED1AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "Fave" */ = {
+		AFBA98ED1AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "Mark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFBA98EE1AA9DE3D004DF771 /* Debug */,
@@ -487,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFBA98F01AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "FaveTests" */ = {
+		AFBA98F01AA9DE3D004DF771 /* Build configuration list for PBXNativeTarget "MarkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFBA98F11AA9DE3D004DF771 /* Debug */,
@@ -508,13 +496,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AFBA98D71AA9DE3C004DF771 /* Fave.xcdatamodeld */ = {
+		AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AFBA98D81AA9DE3C004DF771 /* Fave.xcdatamodel */,
+				AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */,
 			);
-			currentVersion = AFBA98D81AA9DE3C004DF771 /* Fave.xcdatamodel */;
-			path = Fave.xcdatamodeld;
+			currentVersion = AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */;
+			path = Mark.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
