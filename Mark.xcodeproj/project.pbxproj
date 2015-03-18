@@ -29,12 +29,10 @@
 		AFF480751ABA068D00F8E01B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480641ABA068D00F8E01B /* Category.swift */; };
 		AFF480761ABA068D00F8E01B /* SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480651ABA068D00F8E01B /* SavedURL.swift */; };
 		AFF480771ABA068D00F8E01B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF480661ABA068D00F8E01B /* Images.xcassets */; };
-		AFF480781ABA068D00F8E01B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF480671ABA068D00F8E01B /* Info.plist */; };
 		AFF480791ABA068D00F8E01B /* Mark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */; };
 		AFF4807A1ABA068D00F8E01B /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */; };
 		AFF4807B1ABA068D00F8E01B /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806B1ABA068D00F8E01B /* SplitVC.swift */; };
 		AFF4807C1ABA068D00F8E01B /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */; };
-		AFF4807D1ABA068D00F8E01B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF4806E1ABA068D00F8E01B /* Info.plist */; };
 		AFF4807F1ABA069600F8E01B /* MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806F1ABA068D00F8E01B /* MarkTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,12 +109,11 @@
 				AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */,
 				AFF4805F1ABA068D00F8E01B /* Main.storyboard */,
 				AFF480611ABA068D00F8E01B /* Core Data Models */,
-				AFF480661ABA068D00F8E01B /* Images.xcassets */,
-				AFF480671ABA068D00F8E01B /* Info.plist */,
 				AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */,
 				AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */,
 				AFF4806B1ABA068D00F8E01B /* SplitVC.swift */,
 				AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */,
+				AFF480801ABA086400F8E01B /* Supporting Files */,
 			);
 			path = Mark;
 			sourceTree = "<group>";
@@ -139,6 +136,15 @@
 				AFF4806F1ABA068D00F8E01B /* MarkTests.swift */,
 			);
 			path = MarkTests;
+			sourceTree = "<group>";
+		};
+		AFF480801ABA086400F8E01B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFF480661ABA068D00F8E01B /* Images.xcassets */,
+				AFF480671ABA068D00F8E01B /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF4807D1ABA068D00F8E01B /* Info.plist in Resources */,
 				AFF480721ABA068D00F8E01B /* Main.storyboard in Resources */,
 				AFF480771ABA068D00F8E01B /* Images.xcassets in Resources */,
-				AFF480781ABA068D00F8E01B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
