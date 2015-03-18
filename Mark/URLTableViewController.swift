@@ -52,17 +52,6 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
             self.urls = result
         }
     }
-    
-    @IBAction func addButtonClicked(sender: NSButton) {
-//        let addEditView = self.splitVC.splitViewItems.last as NSSplitViewItem
-//        addEditView.animator().collapsed = false
-//        if !self.isAddingRecord {
-//            self.isAddingRecord = true
-//            self.tableView.insertRowsAtIndexes(NSIndexSet(index: 0), withAnimation: NSTableViewAnimationOptions.SlideDown)
-//        
-//        }
-    }
-    
 
 }
 
