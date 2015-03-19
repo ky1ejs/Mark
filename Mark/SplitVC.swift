@@ -11,8 +11,8 @@ import Cocoa
 class SplitVC : NSSplitViewController {
     
     @IBAction func toggleAddSplitView(sender: NSToolbarItem) {
-        let view = self.splitView.subviews[2] as NSView
-        view.hidden = !view.hidden
+        let addView = self.splitView.subviews[2] as NSView
+        addView.hidden = !addView.hidden
     }
 
     

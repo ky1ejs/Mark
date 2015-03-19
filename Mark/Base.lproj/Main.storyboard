@@ -655,7 +655,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="608" y="392" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="39E8B6C3-C16F-4BEF-BEDD-EC04D022564B" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="poh-Bz-y0P">
+                        <toolbar key="toolbar" implicitIdentifier="39E8B6C3-C16F-4BEF-BEDD-EC04D022564B" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="small" id="poh-Bz-y0P">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="506D19D1-F27B-438A-8ABE-F3E1731BF3B9" label="Add url" paletteLabel="Add url" tag="-1" image="NSAddTemplate" id="abn-RY-pMB">
                                     <connections>

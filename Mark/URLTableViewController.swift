@@ -10,13 +10,15 @@ import Cocoa
 
 class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     var urls : NSArray!
-    var isAddingRecord : Bool = false
     
     @IBOutlet weak var tableView : NSTableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetch()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name:
+            NSManagedObjectContextObjectsDidChangeNotification
+, object: AppDelegate.context())
         self.tableView.rowHeight = 60
     }
 
@@ -27,17 +29,14 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return (self.urls != nil) ? (self.isAddingRecord) ? urls.count + 1 : self.urls.count : 0
+        return self.urls.count
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeViewWithIdentifier("SavedURLCell", owner: self) as SavedURLCell
-        if (!self.isAddingRecord || row != 0) {
-            let url = urls.objectAtIndex(row) as SavedURL
-            cell.textField?.stringValue = url.title!
-            cell.urlTextField.stringValue = url.url!
-            return cell
-        }
+        let url = urls.objectAtIndex(row) as SavedURL
+        cell.textField?.stringValue = url.title!
+        cell.urlTextField.stringValue = url.url!
         return cell
     }
     
@@ -51,6 +50,11 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
         if (error == nil) {
             self.urls = result
         }
+    }
+    
+    func refresh() {
+        fetch()
+        self.tableView.reloadData()
     }
 
 }
