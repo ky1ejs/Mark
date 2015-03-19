@@ -16,10 +16,10 @@ class AddEditURLViewController: NSViewController {
     @IBOutlet var labelTF: NSTextField!
     
     @IBAction func save(sender: NSButton) {
-        let url = SavedURL(managedObjectContext: AppDelegate.context())
-        url.title = self.titleTF.stringValue
-        url.url = self.urlTF.stringValue
-        url.comment = self.commentTF.stringValue
+        let bm = Bookmark(managedObjectContext: AppDelegate.context())
+        bm.title = self.titleTF.stringValue
+        bm.url = self.urlTF.stringValue
+        bm.comment = self.commentTF.stringValue
         var error : NSError?
         AppDelegate.context().save(&error)
         if (error != nil) {

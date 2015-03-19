@@ -24,16 +24,16 @@
 		AFF480701ABA068D00F8E01B /* AddEditURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */; };
 		AFF480711ABA068D00F8E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */; };
 		AFF480721ABA068D00F8E01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF4805F1ABA068D00F8E01B /* Main.storyboard */; };
-		AFF480731ABA068D00F8E01B /* _Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480621ABA068D00F8E01B /* _Category.swift */; };
-		AFF480741ABA068D00F8E01B /* _SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480631ABA068D00F8E01B /* _SavedURL.swift */; };
-		AFF480751ABA068D00F8E01B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480641ABA068D00F8E01B /* Category.swift */; };
-		AFF480761ABA068D00F8E01B /* SavedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480651ABA068D00F8E01B /* SavedURL.swift */; };
 		AFF480771ABA068D00F8E01B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF480661ABA068D00F8E01B /* Images.xcassets */; };
-		AFF480791ABA068D00F8E01B /* Mark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */; };
 		AFF4807A1ABA068D00F8E01B /* SavedURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */; };
 		AFF4807B1ABA068D00F8E01B /* SplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806B1ABA068D00F8E01B /* SplitVC.swift */; };
 		AFF4807C1ABA068D00F8E01B /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */; };
 		AFF4807F1ABA069600F8E01B /* MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4806F1ABA068D00F8E01B /* MarkTests.swift */; };
+		AFF480831ABAE0EF00F8E01B /* Mark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF480811ABAE0EF00F8E01B /* Mark.xcdatamodeld */; };
+		AFF480881ABAE10A00F8E01B /* _Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480841ABAE10A00F8E01B /* _Bookmark.swift */; };
+		AFF480891ABAE10A00F8E01B /* _Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480851ABAE10A00F8E01B /* _Label.swift */; };
+		AFF4808A1ABAE10A00F8E01B /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480861ABAE10A00F8E01B /* Bookmark.swift */; };
+		AFF4808B1ABAE10A00F8E01B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF480871ABAE10A00F8E01B /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,18 +52,18 @@
 		AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditURLViewController.swift; sourceTree = "<group>"; };
 		AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF480601ABA068D00F8E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFF480621ABA068D00F8E01B /* _Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Category.swift; sourceTree = "<group>"; };
-		AFF480631ABA068D00F8E01B /* _SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SavedURL.swift; sourceTree = "<group>"; };
-		AFF480641ABA068D00F8E01B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		AFF480651ABA068D00F8E01B /* SavedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURL.swift; sourceTree = "<group>"; };
 		AFF480661ABA068D00F8E01B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFF480671ABA068D00F8E01B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fave.xcdatamodel; sourceTree = "<group>"; };
 		AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedURLCell.swift; sourceTree = "<group>"; };
 		AFF4806B1ABA068D00F8E01B /* SplitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitVC.swift; sourceTree = "<group>"; };
 		AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTableViewController.swift; sourceTree = "<group>"; };
 		AFF4806E1ABA068D00F8E01B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF4806F1ABA068D00F8E01B /* MarkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkTests.swift; sourceTree = "<group>"; };
+		AFF480821ABAE0EF00F8E01B /* Mark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mark.xcdatamodel; sourceTree = "<group>"; };
+		AFF480841ABAE10A00F8E01B /* _Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Bookmark.swift; sourceTree = "<group>"; };
+		AFF480851ABAE10A00F8E01B /* _Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Label.swift; sourceTree = "<group>"; };
+		AFF480861ABAE10A00F8E01B /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		AFF480871ABAE10A00F8E01B /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				AFF4805D1ABA068D00F8E01B /* AddEditURLViewController.swift */,
 				AFF4805E1ABA068D00F8E01B /* AppDelegate.swift */,
 				AFF4805F1ABA068D00F8E01B /* Main.storyboard */,
+				AFF480811ABAE0EF00F8E01B /* Mark.xcdatamodeld */,
 				AFF480611ABA068D00F8E01B /* Core Data Models */,
-				AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */,
 				AFF4806A1ABA068D00F8E01B /* SavedURLCell.swift */,
 				AFF4806B1ABA068D00F8E01B /* SplitVC.swift */,
 				AFF4806C1ABA068D00F8E01B /* URLTableViewController.swift */,
@@ -121,10 +121,10 @@
 		AFF480611ABA068D00F8E01B /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFF480621ABA068D00F8E01B /* _Category.swift */,
-				AFF480631ABA068D00F8E01B /* _SavedURL.swift */,
-				AFF480641ABA068D00F8E01B /* Category.swift */,
-				AFF480651ABA068D00F8E01B /* SavedURL.swift */,
+				AFF480841ABAE10A00F8E01B /* _Bookmark.swift */,
+				AFF480851ABAE10A00F8E01B /* _Label.swift */,
+				AFF480861ABAE10A00F8E01B /* Bookmark.swift */,
+				AFF480871ABAE10A00F8E01B /* Label.swift */,
 			);
 			path = "Core Data Models";
 			sourceTree = "<group>";
@@ -267,15 +267,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF480711ABA068D00F8E01B /* AppDelegate.swift in Sources */,
-				AFF480751ABA068D00F8E01B /* Category.swift in Sources */,
-				AFF480731ABA068D00F8E01B /* _Category.swift in Sources */,
 				AFF4807A1ABA068D00F8E01B /* SavedURLCell.swift in Sources */,
-				AFF480761ABA068D00F8E01B /* SavedURL.swift in Sources */,
 				AFF480701ABA068D00F8E01B /* AddEditURLViewController.swift in Sources */,
-				AFF480741ABA068D00F8E01B /* _SavedURL.swift in Sources */,
 				AFF4807B1ABA068D00F8E01B /* SplitVC.swift in Sources */,
-				AFF480791ABA068D00F8E01B /* Mark.xcdatamodeld in Sources */,
+				AFF480831ABAE0EF00F8E01B /* Mark.xcdatamodeld in Sources */,
+				AFF480881ABAE10A00F8E01B /* _Bookmark.swift in Sources */,
+				AFF480891ABAE10A00F8E01B /* _Label.swift in Sources */,
 				AFF4807C1ABA068D00F8E01B /* URLTableViewController.swift in Sources */,
+				AFF4808B1ABAE10A00F8E01B /* Label.swift in Sources */,
+				AFF4808A1ABAE10A00F8E01B /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,12 +500,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AFF480681ABA068D00F8E01B /* Mark.xcdatamodeld */ = {
+		AFF480811ABAE0EF00F8E01B /* Mark.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */,
+				AFF480821ABAE0EF00F8E01B /* Mark.xcdatamodel */,
 			);
-			currentVersion = AFF480691ABA068D00F8E01B /* Fave.xcdatamodel */;
+			currentVersion = AFF480821ABAE0EF00F8E01B /* Mark.xcdatamodel */;
 			path = Mark.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

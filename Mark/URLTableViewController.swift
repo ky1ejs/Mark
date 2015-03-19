@@ -34,9 +34,9 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeViewWithIdentifier("SavedURLCell", owner: self) as SavedURLCell
-        let url = urls.objectAtIndex(row) as SavedURL
-        cell.textField?.stringValue = url.title!
-        cell.urlTextField.stringValue = url.url!
+        let bm = urls.objectAtIndex(row) as Bookmark
+        cell.textField?.stringValue = bm.title!
+        cell.urlTextField.stringValue = bm.url!
         return cell
     }
     
@@ -46,7 +46,7 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     
     func fetch() {
         var error : NSError?
-        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: SavedURL.entityName()), error: &error)
+        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
         if (error == nil) {
             self.urls = result
         }

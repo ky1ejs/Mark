@@ -1,23 +1,23 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Category.swift instead.
+// Make changes to Label.swift instead.
 
 import CoreData
 
-enum CategoryAttributes: String {
+enum LabelAttributes: String {
     case name = "name"
 }
 
-enum CategoryRelationships: String {
+enum LabelRelationships: String {
     case urls = "urls"
 }
 
 @objc
-class _Category: NSManagedObject {
+class _Label: NSManagedObject {
 
     // MARK: - Class methods
 
     class func entityName () -> String {
-        return "Category"
+        return "Label"
     }
 
     class func entity(managedObjectContext: NSManagedObjectContext!) -> NSEntityDescription! {
@@ -31,7 +31,7 @@ class _Category: NSManagedObject {
     }
 
     convenience init(managedObjectContext: NSManagedObjectContext!) {
-        let entity = _Category.entity(managedObjectContext)
+        let entity = _Label.entity(managedObjectContext)
         self.init(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
     }
 
@@ -49,7 +49,7 @@ class _Category: NSManagedObject {
 
 }
 
-extension _Category {
+extension _Label {
 
     func addUrls(objects: NSSet) {
         let mutable = self.urls.mutableCopy() as NSMutableSet
@@ -63,13 +63,13 @@ extension _Category {
         self.urls = mutable.copy() as NSSet
     }
 
-    func addUrlsObject(value: SavedURL!) {
+    func addUrlsObject(value: Bookmark!) {
         let mutable = self.urls.mutableCopy() as NSMutableSet
         mutable.addObject(value)
         self.urls = mutable.copy() as NSSet
     }
 
-    func removeUrlsObject(value: SavedURL!) {
+    func removeUrlsObject(value: Bookmark!) {
         let mutable = self.urls.mutableCopy() as NSMutableSet
         mutable.removeObject(value)
         self.urls = mutable.copy() as NSSet
