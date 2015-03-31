@@ -24,7 +24,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: NSManagedObjectContextObjectsDidChangeNotification, object: mocStatic.moc)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: NSManagedObjectContextObjectsDidChangeNotification, object: CDStack.moc)
         self.tableView.rowHeight = 60
     }
 
@@ -52,7 +52,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     
     func fetch() {
         var error : NSError?
-        let result = mocStatic.moc.executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
+        let result = CDStack.moc.executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
         if (error == nil) {
             self.urls = result
         }

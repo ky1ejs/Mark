@@ -85,13 +85,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return .TerminateNow
     }
     
-//    class func context() -> NSManagedObjectContext? {
-//        if let del = NSApplication.sharedApplication().delegate as? AppDelegate {
-//            return del.managedObjectContext!;
-//        } else {
-//            return nil
-//        }
-//    }
-    
 }
 

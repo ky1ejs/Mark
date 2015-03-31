@@ -8,7 +8,7 @@
 
 import Cocoa
 
-struct mocStatic {
+struct CDStack {
     static let moc: NSManagedObjectContext! = {
         let coordinator = CoreDataStack.persistentStoreCoordinator()
         if coordinator == nil {
@@ -86,8 +86,8 @@ class CoreDataStack: NSObject {
     
     func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
         // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
-        if (mocStatic.moc != nil) {
-            return mocStatic.moc.undoManager
+        if (CDStack.moc != nil) {
+            return CDStack.moc.undoManager
         } else {
             return nil
         }

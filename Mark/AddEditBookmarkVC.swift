@@ -16,12 +16,12 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate {
     var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
-        let bm = Bookmark(managedObjectContext: mocStatic.moc)
+        let bm = Bookmark(managedObjectContext: CDStack.moc)
         bm.title = self.titleTF.stringValue
         bm.url = self.urlTF.stringValue
         bm.comment = self.commentTF.stringValue
         var error : NSError?
-        mocStatic.moc.save(&error)
+        CDStack.moc.save(&error)
         if (error != nil) {
             //TODO: handle this
             abort()
