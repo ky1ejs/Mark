@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  Mark
 //
@@ -8,17 +8,23 @@
 
 import Cocoa
 
-class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     var urls : NSArray!
-    
     @IBOutlet weak var tableView : NSTableView!
+    
+    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.fetch()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.fetch()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetch()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name:
-            NSManagedObjectContextObjectsDidChangeNotification
-, object: AppDelegate.context())
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: NSManagedObjectContextObjectsDidChangeNotification, object: mocStatic.moc)
         self.tableView.rowHeight = 60
     }
 
@@ -33,7 +39,7 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeViewWithIdentifier("SavedURLCell", owner: self) as SavedURLCell
+        let cell = tableView.makeViewWithIdentifier("BookmarkCell", owner: self) as BookmarkCell
         let bm = urls.objectAtIndex(row) as Bookmark
         cell.textField?.stringValue = bm.title!
         cell.urlTextField.stringValue = bm.url!
@@ -46,7 +52,7 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     
     func fetch() {
         var error : NSError?
-        let result = AppDelegate.context().executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
+        let result = mocStatic.moc.executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
         if (error == nil) {
             self.urls = result
         }
@@ -58,4 +64,3 @@ class URLTableViewController : NSViewController, NSTableViewDataSource, NSTableV
     }
 
 }
-

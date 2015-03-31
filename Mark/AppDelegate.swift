@@ -1,8 +1,8 @@
-//
+
 //  AppDelegate.swift
 //  Mark
 //
-//  Created by Kyle McAlpine on 06/03/2015.
+//  Created by Kyle McAlpine on 20/03/2015.
 //  Copyright (c) 2015 kylejm. All rights reserved.
 //
 
@@ -10,7 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -21,87 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-    // MARK: - Core Data stack
-
-    lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "io.kylejm.Mark" in the user's Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
-        let appSupportURL = urls[urls.count - 1] as NSURL
-        return appSupportURL.URLByAppendingPathComponent("io.kylejm.Mark")
-    }()
-
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("Mark", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
-    }()
-
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
-        // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. (The directory for the store is created, if necessary.) This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
-        let fileManager = NSFileManager.defaultManager()
-        var shouldFail = false
-        var error: NSError? = nil
-        var failureReason = "There was an error creating or loading the application's saved data."
-
-        // Make sure the application files directory is there
-        let propertiesOpt = self.applicationDocumentsDirectory.resourceValuesForKeys([NSURLIsDirectoryKey], error: &error)
-        if let properties = propertiesOpt {
-            if !properties[NSURLIsDirectoryKey]!.boolValue {
-                failureReason = "Expected a folder to store application data, found a file \(self.applicationDocumentsDirectory.path)."
-                shouldFail = true
-            }
-        } else if error!.code == NSFileReadNoSuchFileError {
-            error = nil
-            fileManager.createDirectoryAtPath(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil, error: &error)
-        }
-        
-        // Create the coordinator and store
-        var coordinator: NSPersistentStoreCoordinator?
-        if !shouldFail && (error == nil) {
-            coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Mark.storedata")
-            if coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
-                coordinator = nil
-            }
-        }
-        
-        if shouldFail || (error != nil) {
-            // Report any error we got.
-            let dict = NSMutableDictionary()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
-            if error != nil {
-                dict[NSUnderlyingErrorKey] = error
-            }
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            NSApplication.sharedApplication().presentError(error!)
-            return nil
-        } else {
-            return coordinator
-        }
-    }()
-
-    lazy var managedObjectContext: NSManagedObjectContext? = {
-        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-        let coordinator = self.persistentStoreCoordinator
-        if coordinator == nil {
-            return nil
-        }
-        var managedObjectContext = NSManagedObjectContext()
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
-    
-    class func context() -> NSManagedObjectContext {
-        let del = NSApplication.sharedApplication().delegate as AppDelegate
-        return del.managedObjectContext!;
-    }
-
     // MARK: - Core Data Saving and Undo support
 
     @IBAction func saveAction(sender: AnyObject!) {
         // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-        if let moc = self.managedObjectContext {
+        if let moc = mocStatic.moc {
             if !moc.commitEditing() {
                 NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing before saving")
             }
@@ -114,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
         // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
-        if let moc = self.managedObjectContext {
+        if let moc = mocStatic.moc {
             return moc.undoManager
         } else {
             return nil
@@ -124,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
         // Save changes in the application's managed object context before the application terminates.
         
-        if let moc = managedObjectContext {
+        if let moc = mocStatic.moc {
             if !moc.commitEditing() {
                 NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate")
                 return .TerminateCancel
@@ -161,6 +84,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .TerminateNow
     }
-
+    
+//    class func context() -> NSManagedObjectContext? {
+//        if let del = NSApplication.sharedApplication().delegate as? AppDelegate {
+//            return del.managedObjectContext!;
+//        } else {
+//            return nil
+//        }
+//    }
+    
 }
 

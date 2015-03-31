@@ -8,6 +8,6 @@
 
 import Cocoa
 
-class SavedURLCell : NSTableCellView {
+class BookmarkCell : NSTableCellView {
     @IBOutlet var urlTextField : NSTextField!
 }
