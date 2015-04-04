@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func saveAction(sender: AnyObject!) {
         // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-        if let moc = mocStatic.moc {
+        if let moc = CDStack.moc {
             if !moc.commitEditing() {
                 NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing before saving")
             }
@@ -37,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
         // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
-        if let moc = mocStatic.moc {
+        if let moc = CDStack.moc {
             return moc.undoManager
         } else {
             return nil
@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
         // Save changes in the application's managed object context before the application terminates.
         
-        if let moc = mocStatic.moc {
+        if let moc = CDStack.moc {
             if !moc.commitEditing() {
                 NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate")
                 return .TerminateCancel
