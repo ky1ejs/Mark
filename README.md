@@ -6,7 +6,7 @@ I also wanted to completely scratch my own itch with this one and make an app to
 
 ##What is it?
 
-Basically just a place to keep all your favourite links from (iOS Dev Weekly)[https://iosdevweekly.com].
+Basically just a place to keep all your favourite links from [iOS Dev Weekly](https://iosdevweekly.com).
 
 I'm kidding, but mostly yeah. Any link that you want to keep, store it here. I often have a scenario where I'm trying to do something and I remember a post or resource that is relevant to what I was trying to do. I want this app to allow you to find URLs that you've saved in the quickest and easiest way possible.
 
