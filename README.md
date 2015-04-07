@@ -2,7 +2,7 @@
 
 I've never made a Mac app and I thought it was a nice idea to learn Swift whilst also making my first Mac app (I am playing with Swift on iOS too, of course).
 
-I also wanted to completely scratch my own itch with this one and make an app to manage all the super handy blog posts, guides, resources, [memes](http://weknowmemes.com/wp-content/uploads/2013/09/conversations-between-browsers-2.jpg) etc. out there with all the cool features I could think of. :blush: :stuck_out_tongue:
+I also wanted to completely scratch my own itch with this one and make an app to manage all the super handy blog posts, guides, resources, memes etc. out there with all the cool features I could think of. :blush: :stuck_out_tongue:
 
 ##What is it?
 
@@ -12,7 +12,7 @@ I'm kidding, but mostly yeah. Any link that you want to keep, store it here. I o
 
 ##How will it allow you to find the URLs?
 
-Well, I'm thinking that I'm going to use both a file system like heirachry/tree that the bookmarks/favourites part of Safari and other web browsers offer, but also use tagging. It's kind of like how you orgainise notes in Evernote I think. You have a notepad to store the notes in, but you can tag notes with any word and find them all in one place.
+Well, I'm thinking that I'm going to use both a file system like heirachry/tree that the bookmarks/favourites part of Safari and other [web browsers](http://weknowmemes.com/wp-content/uploads/2013/09/conversations-between-browsers-2.jpg) offer, but also use tagging. It's kind of like how you orgainise notes in Evernote I think. You have a notepad to store the notes in, but you can tag notes with any word and find them all in one place.
 
 After that, I'd like the app to pull down the html page and parse it when you search for a URL. This way, if you just remember a phrase from the page you can still find it.
 
