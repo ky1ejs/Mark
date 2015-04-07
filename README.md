@@ -28,7 +28,7 @@ I don't really think it's that serious, it's just a play thing right now.
 
 Lots of ways:
 
-- Companoin iOS app for sure
+- Companion iOS app for sure
 - Safari extension, menu bar button, hotkey or notification centre widget for saving urls
 - Safari extension, menu bar button, hotkey or notification centre widget for finding urls
 - iOS extension for saving from Safari and other apps
