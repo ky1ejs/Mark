@@ -24,7 +24,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 60
-        self.fetch()
+        self.fetchAndReload()
     }
 
     override var representedObject: AnyObject? {
@@ -49,19 +49,15 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
         return 60
     }
     
-    func fetch() {
+    func fetchAndReload() {
         let query = PFQuery(className: "Bookmark")
         query.fromLocalDatastore()
         query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if (error == nil) {
                 self.bookmarks = results!
+                self.tableView.reloadData()
             }
         }
-    }
-    
-    func refresh() {
-        fetch()
-        self.tableView.reloadData()
     }
 
 }
