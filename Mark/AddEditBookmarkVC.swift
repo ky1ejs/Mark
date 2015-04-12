@@ -13,6 +13,8 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
     @IBOutlet var urlTF : NSTextField!
     @IBOutlet var commentTF : NSTextField!
     @IBOutlet var tagsTF : NSTokenField!
+    @IBOutlet var bookmarkTVC : BookmarkTVC!
+    
     var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
@@ -37,7 +39,8 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         bm["url"] = self.urlTF.stringValue
         bm["comment"] = self.commentTF.stringValue
         bm["tags"] = tagObjects
-        bm.pin()
+        bm.pinInBackgroundWithBlock(nil)
+        self.bookmarkTVC.insertBookmark(bm)
     }
     
     func tokenField(tokenField: NSTokenField, shouldAddObjects tokens: [AnyObject], atIndex index: Int) -> [AnyObject] {

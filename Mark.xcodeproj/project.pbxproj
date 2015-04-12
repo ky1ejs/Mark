@@ -119,9 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				AF1DAA411ADA831B00C89445 /* AppDelegate.swift */,
-				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
-				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
 				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
+				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
+				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
 				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
 				AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */,
 				AF1DAA431ADA831B00C89445 /* Images.xcassets */,
