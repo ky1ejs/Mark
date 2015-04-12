@@ -29,6 +29,6 @@
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>Mark.MarkApplication</string>
+	<string>NSApplication</string>
 </dict>
 </plist>

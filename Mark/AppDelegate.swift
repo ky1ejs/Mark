@@ -11,9 +11,14 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    var windowController: NSWindowController!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId(parseAPIKey, clientKey: parseClientKey)
+        
+        self.windowController = NSWindowController(windowNibName: "BookmarkWindow")
+        self.windowController.showWindow(self)
         // Insert code here to initialize your application
     }
 
