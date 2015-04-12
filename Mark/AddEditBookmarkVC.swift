@@ -16,20 +16,19 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate {
     var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
-        let bm = Bookmark(managedObjectContext: CDStack.moc)
-        bm.title = self.titleTF.stringValue
-        bm.url = self.urlTF.stringValue
-        bm.comment = self.commentTF.stringValue
-        var error : NSError?
-        CDStack.moc.save(&error)
-        if (error != nil) {
-            //TODO: handle this
-            abort()
-        }
+        let bm = PFObject(className: "Bookmark")
+        bm["title"] = self.titleTF.stringValue
+        bm["url"] = self.urlTF.stringValue
+        bm["comment"] = self.commentTF.stringValue
+        bm.pin()
+    }
+    
+    override func viewDidLoad() {
+        
     }
     
     override func controlTextDidBeginEditing(obj: NSNotification) {
-        self.activeTF = obj.object as NSTextField
+        self.activeTF = obj.object as! NSTextField
     }
     
     override func controlTextDidEndEditing(obj: NSNotification) {

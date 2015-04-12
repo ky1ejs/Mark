@@ -6,75 +6,87 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		AFA852271ABCD09900F54DD7 /* Mogen */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = AFA852281ABCD09900F54DD7 /* Build configuration list for PBXAggregateTarget "Mogen" */;
-			buildPhases = (
-				AFA8522B1ABCD09D00F54DD7 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Mogen;
-			productName = Mogen;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		AFA852011ABCCB2300F54DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA852001ABCCB2300F54DD7 /* AppDelegate.swift */; };
-		AFA852061ABCCB2300F54DD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA852051ABCCB2300F54DD7 /* Images.xcassets */; };
-		AFA852091ABCCB2300F54DD7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA852071ABCCB2300F54DD7 /* MainMenu.xib */; };
-		AFA852151ABCCB2300F54DD7 /* MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA852141ABCCB2300F54DD7 /* MarkTests.swift */; };
-		AFA852231ABCCBA700F54DD7 /* AddEditBookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8521E1ABCCBA700F54DD7 /* AddEditBookmarkVC.swift */; };
-		AFA852241ABCCBA700F54DD7 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8521F1ABCCBA700F54DD7 /* BookmarkCell.swift */; };
-		AFA852251ABCCBA700F54DD7 /* BookmarkTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA852201ABCCBA700F54DD7 /* BookmarkTVC.swift */; };
-		AFA852261ABCCBA700F54DD7 /* Mark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA852211ABCCBA700F54DD7 /* Mark.xcdatamodeld */; };
-		AFAA8CF81ACAA63B00122D72 /* _Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA8CF41ACAA63B00122D72 /* _Bookmark.swift */; };
-		AFAA8CF91ACAA63B00122D72 /* _Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA8CF51ACAA63B00122D72 /* _Label.swift */; };
-		AFAA8CFA1ACAA63B00122D72 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA8CF61ACAA63B00122D72 /* Bookmark.swift */; };
-		AFAA8CFB1ACAA63B00122D72 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA8CF71ACAA63B00122D72 /* Label.swift */; };
-		AFAA8CFD1ACAC78000122D72 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA8CFC1ACAC78000122D72 /* CoreDataStack.swift */; };
+		AF1DAA421ADA831B00C89445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA411ADA831B00C89445 /* AppDelegate.swift */; };
+		AF1DAA441ADA831B00C89445 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA431ADA831B00C89445 /* Images.xcassets */; };
+		AF1DAA531ADA831B00C89445 /* MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA521ADA831B00C89445 /* MarkTests.swift */; };
+		AF1DAA5F1ADA838B00C89445 /* AddEditBookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */; };
+		AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */; };
+		AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */; };
+		AF1DAA651ADA840B00C89445 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA631ADA840B00C89445 /* Bolts.framework */; };
+		AF1DAA661ADA840B00C89445 /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA641ADA840B00C89445 /* ParseOSX.framework */; };
+		AF1DAA681ADA842F00C89445 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */; };
+		AF1DAA6A1ADA843400C89445 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA691ADA843400C89445 /* ApplicationServices.framework */; };
+		AF1DAA6C1ADA845D00C89445 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6B1ADA845D00C89445 /* Security.framework */; };
+		AF1DAA6E1ADA846C00C89445 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6D1ADA846C00C89445 /* QuartzCore.framework */; };
+		AF1DAA701ADA847600C89445 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6F1ADA847600C89445 /* CoreLocation.framework */; };
+		AF1DAA721ADA848500C89445 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA711ADA848500C89445 /* CoreGraphics.framework */; };
+		AF1DAA741ADA848B00C89445 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA731ADA848B00C89445 /* CFNetwork.framework */; };
+		AF1DAA761ADA84A800C89445 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA751ADA84A800C89445 /* libz.dylib */; };
+		AF1DAA781ADA84D200C89445 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */; };
+		AF1DAA7D1ADA866300C89445 /* MarkApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA7C1ADA866300C89445 /* MarkApplication.swift */; };
+		AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */; };
+		AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AFA8520F1ABCCB2300F54DD7 /* PBXContainerItemProxy */ = {
+		AF1DAA4D1ADA831B00C89445 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AFA851F31ABCCB2300F54DD7 /* Project object */;
+			containerPortal = AF1DAA341ADA831B00C89445 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AFA851FA1ABCCB2300F54DD7;
+			remoteGlobalIDString = AF1DAA3B1ADA831B00C89445;
 			remoteInfo = Mark;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AFA851FB1ABCCB2300F54DD7 /* Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mark.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA851FF1ABCCB2300F54DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFA852001ABCCB2300F54DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFA852051ABCCB2300F54DD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AFA852081ABCCB2300F54DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		AFA8520E1ABCCB2300F54DD7 /* MarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA852131ABCCB2300F54DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFA852141ABCCB2300F54DD7 /* MarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTests.swift; sourceTree = "<group>"; };
-		AFA8521E1ABCCBA700F54DD7 /* AddEditBookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditBookmarkVC.swift; sourceTree = "<group>"; };
-		AFA8521F1ABCCBA700F54DD7 /* BookmarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
-		AFA852201ABCCBA700F54DD7 /* BookmarkTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTVC.swift; sourceTree = "<group>"; };
-		AFA852221ABCCBA700F54DD7 /* Mark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mark.xcdatamodel; sourceTree = "<group>"; };
-		AFAA8CF41ACAA63B00122D72 /* _Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Bookmark.swift; sourceTree = "<group>"; };
-		AFAA8CF51ACAA63B00122D72 /* _Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Label.swift; sourceTree = "<group>"; };
-		AFAA8CF61ACAA63B00122D72 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		AFAA8CF71ACAA63B00122D72 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
-		AFAA8CFC1ACAC78000122D72 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AF1DAA3C1ADA831B00C89445 /* Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1DAA401ADA831B00C89445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1DAA411ADA831B00C89445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF1DAA431ADA831B00C89445 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF1DAA4C1ADA831B00C89445 /* MarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1DAA511ADA831B00C89445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1DAA521ADA831B00C89445 /* MarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTests.swift; sourceTree = "<group>"; };
+		AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditBookmarkVC.swift; sourceTree = "<group>"; };
+		AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTVC.swift; sourceTree = "<group>"; };
+		AF1DAA631ADA840B00C89445 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AF1DAA641ADA840B00C89445 /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseOSX.framework; sourceTree = "<group>"; };
+		AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AF1DAA691ADA843400C89445 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		AF1DAA6B1ADA845D00C89445 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AF1DAA6D1ADA846C00C89445 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF1DAA6F1ADA847600C89445 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF1DAA711ADA848500C89445 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF1DAA731ADA848B00C89445 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AF1DAA751ADA84A800C89445 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AF1DAA791ADA84E000C89445 /* Mark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Mark-Bridging-Header.h"; path = "../Mark/Mark-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF1DAA7C1ADA866300C89445 /* MarkApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkApplication.swift; sourceTree = "<group>"; };
+		AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFA851F81ABCCB2300F54DD7 /* Frameworks */ = {
+		AF1DAA391ADA831B00C89445 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1DAA781ADA84D200C89445 /* SystemConfiguration.framework in Frameworks */,
+				AF1DAA761ADA84A800C89445 /* libz.dylib in Frameworks */,
+				AF1DAA741ADA848B00C89445 /* CFNetwork.framework in Frameworks */,
+				AF1DAA721ADA848500C89445 /* CoreGraphics.framework in Frameworks */,
+				AF1DAA701ADA847600C89445 /* CoreLocation.framework in Frameworks */,
+				AF1DAA6E1ADA846C00C89445 /* QuartzCore.framework in Frameworks */,
+				AF1DAA6C1ADA845D00C89445 /* Security.framework in Frameworks */,
+				AF1DAA6A1ADA843400C89445 /* ApplicationServices.framework in Frameworks */,
+				AF1DAA681ADA842F00C89445 /* libsqlite3.dylib in Frameworks */,
+				AF1DAA651ADA840B00C89445 /* Bolts.framework in Frameworks */,
+				AF1DAA661ADA840B00C89445 /* ParseOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA8520B1ABCCB2300F54DD7 /* Frameworks */ = {
+		AF1DAA491ADA831B00C89445 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,87 +96,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFA851F21ABCCB2300F54DD7 = {
+		AF1DAA331ADA831B00C89445 = {
 			isa = PBXGroup;
 			children = (
-				AFA851FD1ABCCB2300F54DD7 /* Mark */,
-				AFA852111ABCCB2300F54DD7 /* MarkTests */,
-				AFA851FC1ABCCB2300F54DD7 /* Products */,
+				AF1DAA3E1ADA831B00C89445 /* Mark */,
+				AF1DAA621ADA840B00C89445 /* Frameworks */,
+				AF1DAA4F1ADA831B00C89445 /* MarkTests */,
+				AF1DAA3D1ADA831B00C89445 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AFA851FC1ABCCB2300F54DD7 /* Products */ = {
+		AF1DAA3D1ADA831B00C89445 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFA851FB1ABCCB2300F54DD7 /* Mark.app */,
-				AFA8520E1ABCCB2300F54DD7 /* MarkTests.xctest */,
+				AF1DAA3C1ADA831B00C89445 /* Mark.app */,
+				AF1DAA4C1ADA831B00C89445 /* MarkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFA851FD1ABCCB2300F54DD7 /* Mark */ = {
+		AF1DAA3E1ADA831B00C89445 /* Mark */ = {
 			isa = PBXGroup;
 			children = (
-				AFA852071ABCCB2300F54DD7 /* MainMenu.xib */,
-				AFA852001ABCCB2300F54DD7 /* AppDelegate.swift */,
-				AFA8521E1ABCCBA700F54DD7 /* AddEditBookmarkVC.swift */,
-				AFA8521F1ABCCBA700F54DD7 /* BookmarkCell.swift */,
-				AFA852201ABCCBA700F54DD7 /* BookmarkTVC.swift */,
-				AFAA8CFC1ACAC78000122D72 /* CoreDataStack.swift */,
-				AFA852211ABCCBA700F54DD7 /* Mark.xcdatamodeld */,
-				AFA852051ABCCB2300F54DD7 /* Images.xcassets */,
-				AFAA8CF31ACAA63B00122D72 /* Core Data Models */,
-				AFA851FE1ABCCB2300F54DD7 /* Supporting Files */,
+				AF1DAA411ADA831B00C89445 /* AppDelegate.swift */,
+				AF1DAA431ADA831B00C89445 /* Images.xcassets */,
+				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
+				AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */,
+				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
+				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
+				AF1DAA7C1ADA866300C89445 /* MarkApplication.swift */,
+				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
+				AF1DAA3F1ADA831B00C89445 /* Supporting Files */,
 			);
 			path = Mark;
 			sourceTree = "<group>";
 		};
-		AFA851FE1ABCCB2300F54DD7 /* Supporting Files */ = {
+		AF1DAA3F1ADA831B00C89445 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFA851FF1ABCCB2300F54DD7 /* Info.plist */,
+				AF1DAA401ADA831B00C89445 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AFA852111ABCCB2300F54DD7 /* MarkTests */ = {
+		AF1DAA4F1ADA831B00C89445 /* MarkTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFA852141ABCCB2300F54DD7 /* MarkTests.swift */,
-				AFA852121ABCCB2300F54DD7 /* Supporting Files */,
+				AF1DAA521ADA831B00C89445 /* MarkTests.swift */,
+				AF1DAA501ADA831B00C89445 /* Supporting Files */,
 			);
 			path = MarkTests;
 			sourceTree = "<group>";
 		};
-		AFA852121ABCCB2300F54DD7 /* Supporting Files */ = {
+		AF1DAA501ADA831B00C89445 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFA852131ABCCB2300F54DD7 /* Info.plist */,
+				AF1DAA511ADA831B00C89445 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AFAA8CF31ACAA63B00122D72 /* Core Data Models */ = {
+		AF1DAA621ADA840B00C89445 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFAA8CF41ACAA63B00122D72 /* _Bookmark.swift */,
-				AFAA8CF51ACAA63B00122D72 /* _Label.swift */,
-				AFAA8CF61ACAA63B00122D72 /* Bookmark.swift */,
-				AFAA8CF71ACAA63B00122D72 /* Label.swift */,
+				AF1DAA791ADA84E000C89445 /* Mark-Bridging-Header.h */,
+				AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */,
+				AF1DAA751ADA84A800C89445 /* libz.dylib */,
+				AF1DAA731ADA848B00C89445 /* CFNetwork.framework */,
+				AF1DAA711ADA848500C89445 /* CoreGraphics.framework */,
+				AF1DAA6F1ADA847600C89445 /* CoreLocation.framework */,
+				AF1DAA6D1ADA846C00C89445 /* QuartzCore.framework */,
+				AF1DAA6B1ADA845D00C89445 /* Security.framework */,
+				AF1DAA691ADA843400C89445 /* ApplicationServices.framework */,
+				AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */,
+				AF1DAA631ADA840B00C89445 /* Bolts.framework */,
+				AF1DAA641ADA840B00C89445 /* ParseOSX.framework */,
 			);
-			path = "Core Data Models";
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFA851FA1ABCCB2300F54DD7 /* Mark */ = {
+		AF1DAA3B1ADA831B00C89445 /* Mark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA852181ABCCB2300F54DD7 /* Build configuration list for PBXNativeTarget "Mark" */;
+			buildConfigurationList = AF1DAA561ADA831B00C89445 /* Build configuration list for PBXNativeTarget "Mark" */;
 			buildPhases = (
-				AFA851F71ABCCB2300F54DD7 /* Sources */,
-				AFA851F81ABCCB2300F54DD7 /* Frameworks */,
-				AFA851F91ABCCB2300F54DD7 /* Resources */,
+				AF1DAA381ADA831B00C89445 /* Sources */,
+				AF1DAA391ADA831B00C89445 /* Frameworks */,
+				AF1DAA3A1ADA831B00C89445 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -172,49 +192,46 @@
 			);
 			name = Mark;
 			productName = Mark;
-			productReference = AFA851FB1ABCCB2300F54DD7 /* Mark.app */;
+			productReference = AF1DAA3C1ADA831B00C89445 /* Mark.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFA8520D1ABCCB2300F54DD7 /* MarkTests */ = {
+		AF1DAA4B1ADA831B00C89445 /* MarkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA8521B1ABCCB2300F54DD7 /* Build configuration list for PBXNativeTarget "MarkTests" */;
+			buildConfigurationList = AF1DAA591ADA831B00C89445 /* Build configuration list for PBXNativeTarget "MarkTests" */;
 			buildPhases = (
-				AFA8520A1ABCCB2300F54DD7 /* Sources */,
-				AFA8520B1ABCCB2300F54DD7 /* Frameworks */,
-				AFA8520C1ABCCB2300F54DD7 /* Resources */,
+				AF1DAA481ADA831B00C89445 /* Sources */,
+				AF1DAA491ADA831B00C89445 /* Frameworks */,
+				AF1DAA4A1ADA831B00C89445 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AFA852101ABCCB2300F54DD7 /* PBXTargetDependency */,
+				AF1DAA4E1ADA831B00C89445 /* PBXTargetDependency */,
 			);
 			name = MarkTests;
 			productName = MarkTests;
-			productReference = AFA8520E1ABCCB2300F54DD7 /* MarkTests.xctest */;
+			productReference = AF1DAA4C1ADA831B00C89445 /* MarkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFA851F31ABCCB2300F54DD7 /* Project object */ = {
+		AF1DAA341ADA831B00C89445 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = kylejm;
 				TargetAttributes = {
-					AFA851FA1ABCCB2300F54DD7 = {
-						CreatedOnToolsVersion = 6.2;
+					AF1DAA3B1ADA831B00C89445 = {
+						CreatedOnToolsVersion = 6.3;
 					};
-					AFA8520D1ABCCB2300F54DD7 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = AFA851FA1ABCCB2300F54DD7;
-					};
-					AFA852271ABCD09900F54DD7 = {
-						CreatedOnToolsVersion = 6.2;
+					AF1DAA4B1ADA831B00C89445 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = AF1DAA3B1ADA831B00C89445;
 					};
 				};
 			};
-			buildConfigurationList = AFA851F61ABCCB2300F54DD7 /* Build configuration list for PBXProject "Mark" */;
+			buildConfigurationList = AF1DAA371ADA831B00C89445 /* Build configuration list for PBXProject "Mark" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,29 +239,28 @@
 				en,
 				Base,
 			);
-			mainGroup = AFA851F21ABCCB2300F54DD7;
-			productRefGroup = AFA851FC1ABCCB2300F54DD7 /* Products */;
+			mainGroup = AF1DAA331ADA831B00C89445;
+			productRefGroup = AF1DAA3D1ADA831B00C89445 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFA851FA1ABCCB2300F54DD7 /* Mark */,
-				AFA8520D1ABCCB2300F54DD7 /* MarkTests */,
-				AFA852271ABCD09900F54DD7 /* Mogen */,
+				AF1DAA3B1ADA831B00C89445 /* Mark */,
+				AF1DAA4B1ADA831B00C89445 /* MarkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AFA851F91ABCCB2300F54DD7 /* Resources */ = {
+		AF1DAA3A1ADA831B00C89445 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA852061ABCCB2300F54DD7 /* Images.xcassets in Resources */,
-				AFA852091ABCCB2300F54DD7 /* MainMenu.xib in Resources */,
+				AF1DAA441ADA831B00C89445 /* Images.xcassets in Resources */,
+				AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA8520C1ABCCB2300F54DD7 /* Resources */ = {
+		AF1DAA4A1ADA831B00C89445 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,71 +269,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		AFA8522B1ABCD09D00F54DD7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mogenerator -m Mark/Mark.xcdatamodeld/Mark.xcdatamodel -O Mark/Core\\ Data\\ Models --swift --template-var arc=true";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		AFA851F71ABCCB2300F54DD7 /* Sources */ = {
+		AF1DAA381ADA831B00C89445 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA852231ABCCBA700F54DD7 /* AddEditBookmarkVC.swift in Sources */,
-				AFA852011ABCCB2300F54DD7 /* AppDelegate.swift in Sources */,
-				AFA852241ABCCBA700F54DD7 /* BookmarkCell.swift in Sources */,
-				AFAA8CF91ACAA63B00122D72 /* _Label.swift in Sources */,
-				AFA852261ABCCBA700F54DD7 /* Mark.xcdatamodeld in Sources */,
-				AFAA8CFD1ACAC78000122D72 /* CoreDataStack.swift in Sources */,
-				AFAA8CFB1ACAA63B00122D72 /* Label.swift in Sources */,
-				AFA852251ABCCBA700F54DD7 /* BookmarkTVC.swift in Sources */,
-				AFAA8CF81ACAA63B00122D72 /* _Bookmark.swift in Sources */,
-				AFAA8CFA1ACAA63B00122D72 /* Bookmark.swift in Sources */,
+				AF1DAA5F1ADA838B00C89445 /* AddEditBookmarkVC.swift in Sources */,
+				AF1DAA421ADA831B00C89445 /* AppDelegate.swift in Sources */,
+				AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */,
+				AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */,
+				AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */,
+				AF1DAA7D1ADA866300C89445 /* MarkApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA8520A1ABCCB2300F54DD7 /* Sources */ = {
+		AF1DAA481ADA831B00C89445 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA852151ABCCB2300F54DD7 /* MarkTests.swift in Sources */,
+				AF1DAA531ADA831B00C89445 /* MarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AFA852101ABCCB2300F54DD7 /* PBXTargetDependency */ = {
+		AF1DAA4E1ADA831B00C89445 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AFA851FA1ABCCB2300F54DD7 /* Mark */;
-			targetProxy = AFA8520F1ABCCB2300F54DD7 /* PBXContainerItemProxy */;
+			target = AF1DAA3B1ADA831B00C89445 /* Mark */;
+			targetProxy = AF1DAA4D1ADA831B00C89445 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		AFA852071ABCCB2300F54DD7 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFA852081ABCCB2300F54DD7 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		AFA852161ABCCB2300F54DD7 /* Debug */ = {
+		AF1DAA541ADA831B00C89445 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -336,9 +321,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -359,7 +346,7 @@
 			};
 			name = Debug;
 		};
-		AFA852171ABCCB2300F54DD7 /* Release */ = {
+		AF1DAA551ADA831B00C89445 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -382,6 +369,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -394,29 +382,42 @@
 			};
 			name = Release;
 		};
-		AFA852191ABCCB2300F54DD7 /* Debug */ = {
+		AF1DAA571ADA831B00C89445 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mark/Mark-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AFA8521A1ABCCB2300F54DD7 /* Release */ = {
+		AF1DAA581ADA831B00C89445 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mark/Mark-Bridging-Header.h";
 			};
 			name = Release;
 		};
-		AFA8521C1ABCCB2300F54DD7 /* Debug */ = {
+		AF1DAA5A1ADA831B00C89445 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -436,7 +437,7 @@
 			};
 			name = Debug;
 		};
-		AFA8521D1ABCCB2300F54DD7 /* Release */ = {
+		AF1DAA5B1ADA831B00C89445 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,73 +453,37 @@
 			};
 			name = Release;
 		};
-		AFA852291ABCD09900F54DD7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		AFA8522A1ABCD09900F54DD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFA851F61ABCCB2300F54DD7 /* Build configuration list for PBXProject "Mark" */ = {
+		AF1DAA371ADA831B00C89445 /* Build configuration list for PBXProject "Mark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA852161ABCCB2300F54DD7 /* Debug */,
-				AFA852171ABCCB2300F54DD7 /* Release */,
+				AF1DAA541ADA831B00C89445 /* Debug */,
+				AF1DAA551ADA831B00C89445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA852181ABCCB2300F54DD7 /* Build configuration list for PBXNativeTarget "Mark" */ = {
+		AF1DAA561ADA831B00C89445 /* Build configuration list for PBXNativeTarget "Mark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA852191ABCCB2300F54DD7 /* Debug */,
-				AFA8521A1ABCCB2300F54DD7 /* Release */,
+				AF1DAA571ADA831B00C89445 /* Debug */,
+				AF1DAA581ADA831B00C89445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA8521B1ABCCB2300F54DD7 /* Build configuration list for PBXNativeTarget "MarkTests" */ = {
+		AF1DAA591ADA831B00C89445 /* Build configuration list for PBXNativeTarget "MarkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA8521C1ABCCB2300F54DD7 /* Debug */,
-				AFA8521D1ABCCB2300F54DD7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFA852281ABCD09900F54DD7 /* Build configuration list for PBXAggregateTarget "Mogen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFA852291ABCD09900F54DD7 /* Debug */,
-				AFA8522A1ABCD09900F54DD7 /* Release */,
+				AF1DAA5A1ADA831B00C89445 /* Debug */,
+				AF1DAA5B1ADA831B00C89445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AFA852211ABCCBA700F54DD7 /* Mark.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AFA852221ABCCBA700F54DD7 /* Mark.xcdatamodel */,
-			);
-			currentVersion = AFA852221ABCCBA700F54DD7 /* Mark.xcdatamodel */;
-			path = Mark.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = AFA851F31ABCCB2300F54DD7 /* Project object */;
+	rootObject = AF1DAA341ADA831B00C89445 /* Project object */;
 }

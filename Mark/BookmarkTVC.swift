@@ -9,23 +9,22 @@
 import Cocoa
 
 class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-    var urls : NSArray!
+    var bookmarks = [AnyObject]()
     @IBOutlet weak var tableView : NSTableView!
     
     override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.fetch()
+        
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.fetch()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: NSManagedObjectContextObjectsDidChangeNotification, object: CDStack.moc)
         self.tableView.rowHeight = 60
+        self.fetch()
     }
 
     override var representedObject: AnyObject? {
@@ -35,14 +34,14 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return self.urls.count
+        return self.bookmarks.count
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeViewWithIdentifier("BookmarkCell", owner: self) as BookmarkCell
-        let bm = urls.objectAtIndex(row) as Bookmark
-        cell.textField?.stringValue = bm.title!
-        cell.urlTextField.stringValue = bm.url!
+        let cell = tableView.makeViewWithIdentifier("BookmarkCell", owner: self) as! BookmarkCell
+        let bm = self.bookmarks[row] as! PFObject
+        cell.textField?.stringValue = bm["title"] as! String
+        cell.urlTextField.stringValue = bm["url"] as! String
         return cell
     }
     
@@ -51,10 +50,10 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
     func fetch() {
-        var error : NSError?
-        let result = CDStack.moc.executeFetchRequest(NSFetchRequest(entityName: Bookmark.entityName()), error: &error)
-        if (error == nil) {
-            self.urls = result
+        let query = PFQuery(className: "Bookmark")
+        query.fromLocalDatastore()
+        if let results = query.findObjects() {
+            self.bookmarks = results
         }
     }
     
