@@ -8,11 +8,11 @@
 
 import Cocoa
 
-class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate {
+class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDelegate {
     @IBOutlet var titleTF : NSTextField!
     @IBOutlet var urlTF : NSTextField!
     @IBOutlet var commentTF : NSTextField!
-    @IBOutlet var labelTF : NSTextField!
+    @IBOutlet var tagsTF : NSTokenField!
     var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
@@ -20,11 +20,26 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate {
         bm["title"] = self.titleTF.stringValue
         bm["url"] = self.urlTF.stringValue
         bm["comment"] = self.commentTF.stringValue
+        println(self.tagsTF.objectValue)
         bm.pin()
     }
     
-    override func viewDidLoad() {
+    func tokenField(tokenField: NSTokenField, shouldAddObjects tokens: [AnyObject], atIndex index: Int) -> [AnyObject] {
+        if let newTokens = tokens as? [String] {
+            var allowedTokens = [String]()
+            var currentTokens = self.tagsTF.objectValue as! [String]
+            for token in newTokens {
+                if let firstIndex = find(currentTokens, token) {
+                    if find(currentTokens[firstIndex.successor() ..< currentTokens.endIndex], token) == nil {
+                        allowedTokens.append(token)
+                    }
+                }
+            }
+            
+            return allowedTokens
+        }
         
+        return [AnyObject]()
     }
     
     override func controlTextDidBeginEditing(obj: NSNotification) {
