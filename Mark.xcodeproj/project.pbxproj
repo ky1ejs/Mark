@@ -119,13 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				AF1DAA411ADA831B00C89445 /* AppDelegate.swift */,
-				AF1DAA431ADA831B00C89445 /* Images.xcassets */,
 				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
 				AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */,
 				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
 				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
 				AF1DAA7C1ADA866300C89445 /* MarkApplication.swift */,
 				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
+				AF1DAA431ADA831B00C89445 /* Images.xcassets */,
 				AF1DAA3F1ADA831B00C89445 /* Supporting Files */,
 			);
 			path = Mark;
