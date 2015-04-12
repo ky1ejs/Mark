@@ -52,8 +52,10 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     func fetch() {
         let query = PFQuery(className: "Bookmark")
         query.fromLocalDatastore()
-        if let results = query.findObjects() {
-            self.bookmarks = results
+        query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+            if (error == nil) {
+                self.bookmarks = results!
+            }
         }
     }
     
