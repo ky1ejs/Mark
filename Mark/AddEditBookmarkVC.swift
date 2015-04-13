@@ -9,13 +9,13 @@
 import Cocoa
 
 class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDelegate {
-    @IBOutlet var titleTF : NSTextField!
-    @IBOutlet var urlTF : NSTextField!
-    @IBOutlet var commentTF : NSTextField!
-    @IBOutlet var tagsTF : NSTokenField!
-    @IBOutlet var bookmarkTVC : BookmarkTVC!
+    @IBOutlet weak var titleTF : NSTextField!
+    @IBOutlet weak var urlTF : NSTextField!
+    @IBOutlet weak var commentTF : NSTextField!
+    @IBOutlet weak var tagsTF : NSTokenField!
+    @IBOutlet weak var bookmarkTVC : BookmarkTVC!
     
-    var activeTF : NSTextField!
+    weak var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
         //TODO: validation
