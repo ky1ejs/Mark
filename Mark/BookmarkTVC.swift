@@ -54,13 +54,17 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
         self.tableView.insertRowsAtIndexes(NSIndexSet(index: 0), withAnimation: NSTableViewAnimationOptions.SlideDown)
     }
     
-    override func deleteBackward(sender: AnyObject?) {
-        println("delete")
-    }
-    
     @IBAction func deleteRow(sender: AnyObject) {
         let rowIndex = self.tableView.selectedRow
         if rowIndex > -1 {
+            let bookmarks = self.bookmarks.count
+            if bookmarks > 1 {
+                var rowToSelect = rowIndex + 1
+                if rowToSelect == bookmarks {
+                    rowToSelect -= 2
+                }
+                self.tableView.selectRowIndexes(NSIndexSet(index: rowToSelect), byExtendingSelection: false)
+            }
             self.bookmarks[rowIndex].unpinInBackgroundWithBlock(nil)
             self.bookmarks.removeAtIndex(rowIndex)
             self.tableView.removeRowsAtIndexes(NSIndexSet(index: rowIndex), withAnimation: NSTableViewAnimationOptions.EffectFade)
