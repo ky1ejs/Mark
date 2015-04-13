@@ -84,7 +84,7 @@
                                                     </tableColumns>
                                                     <connections>
                                                         <outlet property="dataSource" destination="m3h-Qn-wrs" id="YE0-MQ-Iqs"/>
-                                                        <outlet property="delegate" destination="m3h-Qn-wrs" id="vsG-Rp-Ngq"/>
+                                                        <outlet property="delegate" destination="m3h-Qn-wrs" id="awD-mh-pwX"/>
                                                     </connections>
                                                 </tableView>
                                             </subviews>
