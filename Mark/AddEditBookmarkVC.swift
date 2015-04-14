@@ -21,24 +21,24 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         //TODO: validation
         
         let tags = self.tagsTF.objectValue as! [String]
-        var tagObjects = [PFObject]()
-        for tag in tags {
+        var tagObjects = [Tag]()
+        for tagName in tags {
             let query = PFQuery(className: "Tag")
             query.fromLocalDatastore()
-            query.whereKey("name", equalTo: tag)
+            query.whereKey("name", equalTo: tagName)
             if let results = query.findObjects() where results.count > 0 {
-                tagObjects.append(results[0] as! PFObject)
+                tagObjects.append(results[0] as! Tag)
             } else {
-                let newTag = PFObject(className: "Tag")
-                newTag["name"] = tag
+                let newTag = Tag(className: "Tag")
+                newTag.name = tagName
                 tagObjects.append(newTag)
             }
         }
-        let bm = PFObject(className: "Bookmark")
-        bm["title"] = self.titleTF.stringValue
-        bm["url"] = self.urlTF.stringValue
-        bm["comment"] = self.commentTF.stringValue
-        bm["tags"] = tagObjects
+        let bm = Bookmark(className: "Bookmark")
+        bm.name = self.titleTF.stringValue
+        bm.URLString = self.urlTF.stringValue
+        bm.comment = self.commentTF.stringValue
+        bm.tags = tagObjects
         bm.pinInBackgroundWithBlock(nil)
         self.bookmarkTVC.insertBookmark(bm)
     }

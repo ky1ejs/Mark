@@ -9,7 +9,7 @@
 import Cocoa
 
 class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-    var bookmarks = [PFObject]()
+    var bookmarks = [Bookmark]()
     @IBOutlet weak var tableView : NSTableView!
     
     override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -40,8 +40,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeViewWithIdentifier("BookmarkCell", owner: self) as! BookmarkCell
         let bm = self.bookmarks[row]
-        cell.textField?.stringValue = bm["title"] as! String
-        cell.urlTextField.stringValue = bm["url"] as! String
+        cell.bookmark = bm
         return cell
     }
     
@@ -49,7 +48,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
         return 60
     }
     
-    func insertBookmark(bm : PFObject) {
+    func insertBookmark(bm : Bookmark) {
         self.bookmarks.insert(bm, atIndex: 0)
         self.tableView.insertRowsAtIndexes(NSIndexSet(index: 0), withAnimation: NSTableViewAnimationOptions.SlideDown)
     }
@@ -76,7 +75,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
         query.fromLocalDatastore()
         query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if (error == nil) {
-                self.bookmarks = results as! [PFObject]
+                self.bookmarks = results as! [Bookmark]
                 self.tableView.reloadData()
             }
         }

@@ -9,5 +9,21 @@
 import Cocoa
 
 class BookmarkCell : NSTableCellView {
-    @IBOutlet var urlTextField : NSTextField!
+    @IBOutlet private var urlTextField : NSTextField!
+    
+    var bookmark : Bookmark! {
+        didSet {
+            self.textField?.stringValue = self.bookmark.name
+            self.urlTextField.stringValue = self.bookmark.URLString
+        }
+    }
+    
+    override func mouseDown(theEvent: NSEvent) {
+        if let tv = self.superview?.superview as? NSTableView {
+            tv.mouseDown(theEvent)
+        }
+        if theEvent.clickCount == 2 {
+            self.bookmark.openURL()
+        }
+    }
 }

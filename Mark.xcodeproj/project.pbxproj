@@ -27,6 +27,11 @@
 		AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */; };
 		AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */; };
 		AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */; };
+		AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */; };
+		AFBE2B1B1ADC2986009A0687 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */; };
+		AFBE2B1D1ADC2A65009A0687 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B1C1ADC2A65009A0687 /* Tag.swift */; };
+		AFBE2B1F1ADC3D21009A0687 /* ParseOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF1DAA641ADA840B00C89445 /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFBE2B201ADC3D21009A0687 /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF1DAA631ADA840B00C89445 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,20 @@
 			remoteInfo = Mark;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFBE2B1E1ADC3D17009A0687 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AFBE2B1F1ADC3D21009A0687 /* ParseOSX.framework in CopyFiles */,
+				AFBE2B201ADC3D21009A0687 /* Bolts.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF1DAA3C1ADA831B00C89445 /* Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +84,9 @@
 		AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCredentials.swift; sourceTree = "<group>"; };
 		AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWindow.xib; sourceTree = "<group>"; };
+		AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
+		AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		AFBE2B1C1ADC2A65009A0687 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +143,9 @@
 				AF1DAA411ADA831B00C89445 /* AppDelegate.swift */,
 				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
 				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
+				AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */,
+				AFBE2B1C1ADC2A65009A0687 /* Tag.swift */,
+				AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */,
 				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
 				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
 				AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */,
@@ -160,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				AF1DAA791ADA84E000C89445 /* Mark-Bridging-Header.h */,
+				AF1DAA641ADA840B00C89445 /* ParseOSX.framework */,
+				AF1DAA631ADA840B00C89445 /* Bolts.framework */,
 				AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */,
 				AF1DAA751ADA84A800C89445 /* libz.dylib */,
 				AF1DAA731ADA848B00C89445 /* CFNetwork.framework */,
@@ -169,8 +196,6 @@
 				AF1DAA6B1ADA845D00C89445 /* Security.framework */,
 				AF1DAA691ADA843400C89445 /* ApplicationServices.framework */,
 				AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */,
-				AF1DAA631ADA840B00C89445 /* Bolts.framework */,
-				AF1DAA641ADA840B00C89445 /* ParseOSX.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +210,7 @@
 				AF1DAA381ADA831B00C89445 /* Sources */,
 				AF1DAA391ADA831B00C89445 /* Frameworks */,
 				AF1DAA3A1ADA831B00C89445 /* Resources */,
+				AFBE2B1E1ADC3D17009A0687 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -275,10 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBE2B1D1ADC2A65009A0687 /* Tag.swift in Sources */,
 				AF1DAA5F1ADA838B00C89445 /* AddEditBookmarkVC.swift in Sources */,
 				AF1DAA421ADA831B00C89445 /* AppDelegate.swift in Sources */,
 				AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */,
 				AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */,
+				AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */,
+				AFBE2B1B1ADC2986009A0687 /* Bookmark.swift in Sources */,
 				AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

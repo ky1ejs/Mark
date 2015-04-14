@@ -15,6 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Parse.enableLocalDatastore()
+        Bookmark.registerSubclass()
+        Tag.registerSubclass()
         Parse.setApplicationId(parseAPIKey, clientKey: parseClientKey)
         
         self.windowController = NSWindowController(windowNibName: "BookmarkWindow")

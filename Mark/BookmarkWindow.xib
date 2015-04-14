@@ -15,7 +15,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="586" height="449"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="gkk-ru-nwI">
                 <rect key="frame" x="0.0" y="0.0" width="586" height="449"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -28,19 +28,19 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="52" horizontalPageScroll="10" verticalLineScroll="52" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pn8-ET-8Xc">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="449"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="449"/>
                                         <clipView key="contentView" id="ymL-4c-n8k">
                                             <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="50" viewBased="YES" id="fsI-rf-JJ1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="266" height="0.0"/>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" rowHeight="50" viewBased="YES" id="fsI-rf-JJ1" customClass="BookmarkTable" customModule="Mark" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="292" minWidth="40" maxWidth="1000" id="TdP-fb-5w1">
+                                                        <tableColumn width="293" minWidth="40" maxWidth="1000" id="TdP-fb-5w1">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -54,7 +54,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="BookmarkCell" id="4gc-Rl-r5h" customClass="BookmarkCell" customModule="Mark" customModuleProvider="target">
-                                                                    <rect key="frame" x="1" y="1" width="292" height="50"/>
+                                                                    <rect key="frame" x="1" y="1" width="293" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boa-4f-dKF">
