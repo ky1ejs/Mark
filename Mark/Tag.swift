@@ -10,6 +10,7 @@ import Cocoa
 
 class Tag: PFObject, PFSubclassing {
     @NSManaged var name : String
+    @NSManaged var bookmarks : Pf
     
     static func parseClassName() -> String {
         return "Tag"

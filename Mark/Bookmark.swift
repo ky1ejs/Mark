@@ -12,7 +12,6 @@ class Bookmark: PFObject, PFSubclassing {
     
     @NSManaged var name : String
     @NSManaged var URLString : String
-    @NSManaged var tags : [Tag]
     @NSManaged var comment : String
     
     static func parseClassName() -> String {
