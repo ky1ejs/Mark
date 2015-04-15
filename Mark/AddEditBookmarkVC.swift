@@ -64,6 +64,24 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         return [AnyObject]()
     }
     
+//    func findMultiple<C: CollectionType where C.Generator.Element: Equatable>(collection: C, element: C.Generator.Element, times: Int) -> Bool {
+//        var found = true
+//        let size = collection.count
+//        var i = 1
+//        for anElement in collection {
+//            
+//        }
+//        for (var i = 0; i < times; i++) {
+//            if let foundForI = find(elements, element) {
+//                elements = [foundForI.successor() ..< elements.endIndex]
+//            } else {
+//                found = false
+//                break
+//            }
+//        }
+//        return found
+//    }
+    
     override func controlTextDidBeginEditing(obj: NSNotification) {
         self.activeTF = obj.object as! NSTextField
     }
