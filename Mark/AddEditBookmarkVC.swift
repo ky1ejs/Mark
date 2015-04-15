@@ -37,9 +37,8 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
                 tag = results.first as! Tag
             } else {
                 tag = Tag(className: "Tag")
-                tag.name = tagName
             }
-            tag.bookmarks.append(bm)
+            tag.bookmarks.addObject(bm)
             tag.pinInBackgroundWithBlock(nil)
         }
         
