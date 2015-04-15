@@ -18,32 +18,55 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
     weak var activeTF : NSTextField!
     
     @IBAction func save(sender: NSButton) {
-        //TODO: validation
+        if (!self.validateFields()) {
+            return
+        }
 
         let bm = Bookmark(className: "Bookmark")
         bm.name = self.titleTF.stringValue
         bm.URLString = self.urlTF.stringValue
-        bm.comment = self.commentTF.stringValue
+        if (count(self.commentTF.stringValue) > 0) {
+            bm.comment = self.commentTF.stringValue
+        }
         bm.pinInBackgroundWithBlock(nil)
         
-        let tags = self.tagsTF.objectValue as! [String]
-        for tagName in tags {
-            let query = Tag.query()!
-            query.fromLocalDatastore()
-            query.whereKey("name", equalTo: tagName)
-            
-            var tag : Tag! = nil
-            if let results = query.findObjects() where results.count > 0 {
-                tag = results.first as! Tag
-            } else {
-                tag = Tag(className: "Tag")
+        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
+            for tagName in tags {
+                let query = Tag.query()!
+                query.fromLocalDatastore()
+                query.whereKey("name", equalTo: tagName)
+                
+                var tag : Tag! = nil
+                if let results = query.findObjects() where results.count > 0 {
+                    tag = results.first as! Tag
+                } else {
+                    tag = Tag(className: "Tag")
+                }
+                tag.bookmarks.addObject(bm)
+                tag.pinInBackgroundWithBlock(nil)
             }
-            tag.bookmarks.addObject(bm)
-            tag.pinInBackgroundWithBlock(nil)
         }
         
         self.bookmarkTVC.insertBookmark(bm)
     }
+    
+    // mark - Validation
+    
+    func validateFields() -> Bool {
+        if count(self.titleTF.stringValue) == 0 {
+            return false
+        }
+        if count(self.urlTF.stringValue) == 0 {
+            return false
+        }
+        return true
+    }
+    
+    override func controlTextDidChange(obj: NSNotification) {
+        //todo
+    }
+    
+    // mark - NSTokenFieldDelegate
     
     func tokenField(tokenField: NSTokenField, shouldAddObjects tokens: [AnyObject], atIndex index: Int) -> [AnyObject] {
         if let newTokens = tokens as? [String] {
@@ -82,23 +105,15 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
 //        return found
 //    }
     
+    
+    // mark - Tracking active text field
+    
     override func controlTextDidBeginEditing(obj: NSNotification) {
         self.activeTF = obj.object as! NSTextField
     }
     
     override func controlTextDidEndEditing(obj: NSNotification) {
         self.activeTF = nil
-    }
-    
-    override func controlTextDidChange(obj: NSNotification) {
-        //todo
-    }
-    
-    @IBAction func toggleAddEditBookmarkViewHidden(sender: AnyObject) {
-        if (self.view.hidden == false && self.activeTF != nil) {
-            self.activeTF.resignFirstResponder()
-        }
-        self.view.hidden = !self.view.hidden
     }
     
 }
