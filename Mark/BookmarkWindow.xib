@@ -13,9 +13,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Mark" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="RUM-Fk-z6F">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="586" height="449"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="contentRect" x="361" y="201" width="586" height="449"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="gkk-ru-nwI">
                 <rect key="frame" x="0.0" y="0.0" width="586" height="449"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" rowHeight="50" viewBased="YES" id="fsI-rf-JJ1" customClass="BookmarkTable" customModule="Mark" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="296" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -57,16 +56,16 @@
                                                                     <rect key="frame" x="1" y="1" width="293" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boa-4f-dKF">
-                                                                            <rect key="frame" x="6" y="8" width="38" height="17"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="boa-4f-dKF">
+                                                                            <rect key="frame" x="6" y="8" width="269" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="NDL-Uj-fjt">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" red="0.3977667298" green="0.3977667298" blue="0.3977667298" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-As-7tU">
-                                                                            <rect key="frame" x="6" y="27" width="100" height="17"/>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-As-7tU">
+                                                                            <rect key="frame" x="6" y="27" width="269" height="17"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="PUC-4O-6cn">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -74,6 +73,14 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="LUP-As-7tU" firstAttribute="leading" secondItem="4gc-Rl-r5h" secondAttribute="leading" constant="8" id="4aG-pp-BAP"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="LUP-As-7tU" secondAttribute="trailing" constant="20" id="5Jh-29-XkN"/>
+                                                                        <constraint firstItem="boa-4f-dKF" firstAttribute="top" secondItem="LUP-As-7tU" secondAttribute="bottom" constant="2" id="8l3-pL-K6e"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="boa-4f-dKF" secondAttribute="trailing" constant="20" id="JSg-xH-2xY"/>
+                                                                        <constraint firstItem="boa-4f-dKF" firstAttribute="leading" secondItem="LUP-As-7tU" secondAttribute="leading" id="Vz6-pY-W7G"/>
+                                                                        <constraint firstItem="LUP-As-7tU" firstAttribute="top" secondItem="4gc-Rl-r5h" secondAttribute="top" constant="6" id="kdt-tH-fNV"/>
+                                                                    </constraints>
                                                                     <connections>
                                                                         <outlet property="textField" destination="LUP-As-7tU" id="NNY-mh-H5Y"/>
                                                                         <outlet property="urlTextField" destination="boa-4f-dKF" id="SDf-xL-Tpi"/>
@@ -120,7 +127,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n11-wm-NYk">
-                                        <rect key="frame" x="126.5" y="391" width="37" height="13"/>
+                                        <rect key="frame" x="126" y="391" width="37" height="13"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Name" id="pRW-MQ-0O4">
                                             <font key="font" metaFont="system" size="10"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -128,7 +135,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GwK-zI-uzF">
-                                        <rect key="frame" x="117.5" y="223" width="55" height="13"/>
+                                        <rect key="frame" x="117" y="223" width="55" height="13"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Comment" id="bAh-61-ELA">
                                             <font key="font" metaFont="system" size="10"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -136,7 +143,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-gb-iTA">
-                                        <rect key="frame" x="130.5" y="335" width="29" height="13"/>
+                                        <rect key="frame" x="130" y="335" width="29" height="13"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="URL" id="tmp-Az-ul0">
                                             <font key="font" metaFont="system" size="10"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -163,7 +170,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0c7-BB-sir">
-                                        <rect key="frame" x="109.5" y="46" width="71" height="32"/>
+                                        <rect key="frame" x="109" y="46" width="71" height="32"/>
                                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OiC-Sx-vLW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -181,7 +188,7 @@
                                         </tokenFieldCell>
                                     </tokenField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="grb-Vs-o1z">
-                                        <rect key="frame" x="131.5" y="279" width="27" height="13"/>
+                                        <rect key="frame" x="131" y="279" width="27" height="13"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tags" id="J9z-A1-KD4">
                                             <font key="font" metaFont="system" size="10"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
