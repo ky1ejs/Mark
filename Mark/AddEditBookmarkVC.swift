@@ -19,7 +19,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
     
     @IBAction func save(sender: NSButton) {
         //TODO: validation
-        
+
         let bm = Bookmark(className: "Bookmark")
         bm.name = self.titleTF.stringValue
         bm.URLString = self.urlTF.stringValue
@@ -51,6 +51,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
             var currentTokens = self.tagsTF.objectValue as! [String]
             for token in newTokens {
                 if let firstIndex = find(currentTokens, token) {
+                    //Always will be found the first time since NSTokenField adds the token to it's "objectValue" before calling this function
                     if find(currentTokens[firstIndex.successor() ..< currentTokens.endIndex], token) == nil {
                         allowedTokens.append(token)
                     }
