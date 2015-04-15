@@ -32,6 +32,7 @@
 		AFBE2B1D1ADC2A65009A0687 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B1C1ADC2A65009A0687 /* Tag.swift */; };
 		AFBE2B1F1ADC3D21009A0687 /* ParseOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF1DAA641ADA840B00C89445 /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFBE2B201ADC3D21009A0687 /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF1DAA631ADA840B00C89445 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFFFB8C01ADF12BC00DFFEA4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB8BF1ADF12BC00DFFEA4 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
 		AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		AFBE2B1C1ADC2A65009A0687 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		AFFFB8BF1ADF12BC00DFFEA4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
 				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
 				AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */,
+				AFFFB8BF1ADF12BC00DFFEA4 /* Category.swift */,
 				AFBE2B1C1ADC2A65009A0687 /* Tag.swift */,
 				AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */,
 				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
@@ -306,6 +309,7 @@
 				AF1DAA421ADA831B00C89445 /* AppDelegate.swift in Sources */,
 				AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */,
 				AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */,
+				AFFFB8C01ADF12BC00DFFEA4 /* Category.swift in Sources */,
 				AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */,
 				AFBE2B1B1ADC2986009A0687 /* Bookmark.swift in Sources */,
 				AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */,

@@ -9,10 +9,10 @@
 import Cocoa
 
 class Bookmark: PFObject, PFSubclassing {
-    
     @NSManaged var name : String
     @NSManaged var URLString : String
     @NSManaged var comment : String
+    @NSManaged var category : Category
     
     static func parseClassName() -> String {
         return "Bookmark"
