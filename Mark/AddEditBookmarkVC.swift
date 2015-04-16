@@ -47,6 +47,8 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
             }
         }
         
+        self.resetTextFields()
+        self.titleTF.becomeFirstResponder()
         self.bookmarkTVC.insertBookmark(bm)
     }
     
@@ -106,7 +108,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
 //    }
     
     
-    // mark - Tracking active text field
+    // mark - Managing the textfields
     
     override func controlTextDidBeginEditing(obj: NSNotification) {
         self.activeTF = obj.object as! NSTextField
@@ -114,6 +116,13 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
     
     override func controlTextDidEndEditing(obj: NSNotification) {
         self.activeTF = nil
+    }
+    
+    func resetTextFields() {
+        self.titleTF.stringValue = ""
+        self.urlTF.stringValue = ""
+        self.tagsTF.stringValue = ""
+        self.commentTF.stringValue = ""
     }
     
 }
