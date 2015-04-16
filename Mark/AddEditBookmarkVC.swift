@@ -41,6 +41,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
                     tag = results.first as! Tag
                 } else {
                     tag = Tag(className: "Tag")
+                    tag.name = tagName
                 }
                 tag.bookmarks.addObject(bm)
                 tag.pinInBackgroundWithBlock(nil)
@@ -107,6 +108,17 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
 //        return found
 //    }
     
+    func tokenField(tokenField: NSTokenField, completionsForSubstring substring: String, indexOfToken tokenIndex: Int, indexOfSelectedItem selectedIndex: UnsafeMutablePointer<Int>) -> [AnyObject]? {
+        let query = Tag.query()
+        query?.fromLocalDatastore()
+        query?.whereKey("name", hasPrefix: substring)
+        let results = query?.findObjects()
+        var names = [String]()
+        for tag in results as! [Tag] {
+            names.append(tag.name)
+        }
+        return names
+    }
     
     // mark - Managing the textfields
     
