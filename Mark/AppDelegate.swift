@@ -7,13 +7,55 @@
 //
 
 import Cocoa
+import SQLite
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     var windowController: NSWindowController!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        let dbPath = NSHomeDirectory() + "/MarkDatabase"
+        NSFileManager.defaultManager().removeItemAtPath(dbPath, error: nil)
+        let databaseNeedsInitialising = !NSFileManager.defaultManager().fileExistsAtPath(dbPath)
+        let db = Database(dbPath) //Creates if doesn't exist
+        if (databaseNeedsInitialising) {
+            
+            db.foreignKeys = true
+            
+            let categories = db["Categories"]
+            let categoryID = Expression<Int64>("category_id")
+            let name = Expression<String>("name")
+            
+            db.create(table: categories) { t in
+                t.column(categoryID, primaryKey: .Autoincrement)
+                t.column(name)
+            }
+            
+            let bookmarks = db["Bookmarks"]
+            let bookmarkID = Expression<Int64>("bookmark_id")
+            let url = Expression<String>("url")
+            let comment = Expression<String?>("comment")
+            let categoryFK = Expression<Int64?>("category_id")
+            
+            db.create(table: bookmarks) { t in
+                t.column(bookmarkID, primaryKey: .Autoincrement)
+                t.column(name)
+                t.column(url)
+                t.column(comment)
+                t.column(categoryFK)
+                t.foreignKey(categoryFK, references: categories[categoryID], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
+            }
+            
+            let tags = db["Tags"]
+            let tagID = Expression<Int64>("tag_id")
+            
+            db.create(table: tags) { t in
+                t.column(tagID, primaryKey: .Autoincrement)
+                t.column(name)
+            }
+        }
+        
+        
         Parse.enableLocalDatastore()
         Bookmark.registerSubclass()
         Tag.registerSubclass()

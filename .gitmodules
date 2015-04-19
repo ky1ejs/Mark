@@ -1,0 +1,3 @@
+[submodule "Frameworks/SQLite.swift"]
+	path = Frameworks/SQLite.swift
+	url = https://github.com/stephencelis/SQLite.swift.git
