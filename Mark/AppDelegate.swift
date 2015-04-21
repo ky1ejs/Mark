@@ -9,6 +9,8 @@
 import Cocoa
 import SQLite
 
+var db : Database!
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     var windowController: NSWindowController!
@@ -17,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let dbPath = NSHomeDirectory() + "/MarkDatabase"
         NSFileManager.defaultManager().removeItemAtPath(dbPath, error: nil)
         let databaseNeedsInitialising = !NSFileManager.defaultManager().fileExistsAtPath(dbPath)
-        let db = Database(dbPath) //Creates if doesn't exist
+        db = Database(dbPath) //Creates if doesn't exist
         if (databaseNeedsInitialising) {
             
             db.foreignKeys = true
@@ -66,15 +68,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             let results = bookmarks.join(categories, on: categories[categoryID] == bookmarks[categoryFK])
             for result in results {
-                println(result[bookmarks[name]])
+                println(result.get(bookmarks[name]))
             }
         }
-        
-        
-        Parse.enableLocalDatastore()
-        Bookmark.registerSubclass()
-        Tag.registerSubclass()
-        Parse.setApplicationId(parseAPIKey, clientKey: parseClientKey)
         
         self.windowController = NSWindowController(windowNibName: "BookmarkWindow")
         self.windowController.showWindow(self)

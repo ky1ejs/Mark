@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SQLite
 
 class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDelegate {
     @IBOutlet weak var titleTF : NSTextField!
@@ -21,36 +22,42 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         if (!self.validateFields()) {
             return
         }
-
-        let bm = Bookmark(className: "Bookmark")
-        bm.name = self.titleTF.stringValue
-        bm.URLString = self.urlTF.stringValue
-        if (count(self.commentTF.stringValue) > 0) {
-            bm.comment = self.commentTF.stringValue
-        }
-        bm.pinInBackgroundWithBlock(nil)
         
-        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
-            for tagName in tags {
-                let query = Tag.query()!
-                query.fromLocalDatastore()
-                query.whereKey("name", equalTo: tagName)
-                
-                var tag : Tag! = nil
-                if let results = query.findObjects() where results.count > 0 {
-                    tag = results.first as! Tag
-                } else {
-                    tag = Tag(className: "Tag")
-                    tag.name = tagName
-                }
-                tag.bookmarks.addObject(bm)
-                tag.pinInBackgroundWithBlock(nil)
-            }
+        let bookmarks = db[bookmarkTableName]
+        
+        var setters = [Setter]()
+        setters.append(bookmarkNameColumn <- self.titleTF.stringValue)
+        setters.append(bookmarkURLColumn <- self.urlTF.stringValue)
+        if (count(self.commentTF.stringValue) > 0) {
+            setters.append(bookmarkCommentColumn <- self.commentTF.stringValue)
         }
+        
+//        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
+//            for tagName in tags {
+//                let query = Tag.query()!
+//                query.fromLocalDatastore()
+//                query.whereKey("name", equalTo: tagName)
+//                
+//                var tag : Tag! = nil
+//                if let results = query.findObjects() where results.count > 0 {
+//                    tag = results.first as! Tag
+//                } else {
+//                    tag = Tag(className: "Tag")
+//                    tag.name = tagName
+//                }
+//                tag.bookmarks.addObject(bm)
+//                tag.pinInBackgroundWithBlock(nil)
+//            }
+//        }
         
         self.resetTextFields()
         self.titleTF.becomeFirstResponder()
-        self.bookmarkTVC.insertBookmark(bm)
+        
+        if let bmID = bookmarks.insert(setters) {
+            let bm = Bookmark(row: bookmarks.filter(bookmarkIDColumn == bmID).first!)
+            self.bookmarkTVC.insertBookmark(bm)
+        }
+        
     }
     
     // mark - Validation
@@ -109,14 +116,14 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
 //    }
     
     func tokenField(tokenField: NSTokenField, completionsForSubstring substring: String, indexOfToken tokenIndex: Int, indexOfSelectedItem selectedIndex: UnsafeMutablePointer<Int>) -> [AnyObject]? {
-        let query = Tag.query()
-        query?.fromLocalDatastore()
-        query?.whereKey("name", hasPrefix: substring)
-        let results = query?.findObjects()
+//        let query = Tag.query()
+//        query?.fromLocalDatastore()
+//        query?.whereKey("name", hasPrefix: substring)
+//        let results = query?.findObjects()
         var names = [String]()
-        for tag in results as! [Tag] {
-            names.append(tag.name)
-        }
+//        for tag in results as! [Tag] {
+//            names.append(tag.name)
+//        }
         return names
     }
     

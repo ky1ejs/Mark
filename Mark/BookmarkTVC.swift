@@ -64,21 +64,15 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
                 }
                 self.tableView.selectRowIndexes(NSIndexSet(index: rowToSelect), byExtendingSelection: false)
             }
-            self.bookmarks[rowIndex].unpinInBackgroundWithBlock(nil)
+//            self.bookmarks[rowIndex].unpinInBackgroundWithBlock(nil)
             self.bookmarks.removeAtIndex(rowIndex)
             self.tableView.removeRowsAtIndexes(NSIndexSet(index: rowIndex), withAnimation: NSTableViewAnimationOptions.EffectFade)
         }
     }
     
     func fetchAndReload() {
-        let query = PFQuery(className: "Bookmark")
-        query.fromLocalDatastore()
-        query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
-            if (error == nil) {
-                self.bookmarks = results as! [Bookmark]
-                self.tableView.reloadData()
-            }
-        }
+        self.bookmarks = Bookmark.bookmarksFromQuery(db[bookmarkTableName])
+        self.tableView.reloadData()
     }
 
 }

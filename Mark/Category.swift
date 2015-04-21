@@ -6,11 +6,26 @@
 //  Copyright (c) 2015 kylejm. All rights reserved.
 //
 
-class Category: PFObject, PFSubclassing {
-    @NSManaged var parentCategory : Category
-    @NSManaged var name : String
+import SQLite
+
+class Category {
+    let tableName = "Categories"
+    let idColumn = Expression<Int64>("category_id")
+    let nameColumn = Expression<String>("name")
     
-    static func parseClassName() -> String {
-        return "Category"
+    let id : Int64
+    var name : String
+    
+    static func categoriesFromQuery(query : Query) -> [Category] {
+        var categories = [Category]()
+        for row in query {
+            categories.append(Category(row: row))
+        }
+        return categories
+    }
+    
+    init(row : Row) {
+        self.id = row[self.idColumn]
+        self.name = row[self.nameColumn]
     }
 }
