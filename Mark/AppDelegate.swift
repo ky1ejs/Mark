@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if (databaseNeedsInitialising) {
             
             db.foreignKeys = true
+            db.trace(println)
             
             let categories = db["Categories"]
             let categoryID = Expression<Int64>("category_id")
@@ -52,6 +53,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             db.create(table: tags) { t in
                 t.column(tagID, primaryKey: .Autoincrement)
                 t.column(name)
+            }
+            
+            if let cat = categories.insert(name <- "test-category") {
+                if let bm = bookmarks.insert(name <- "alice@mac.com", url <- "http://kylejm.io", categoryFK <- cat) {
+                    println("woot!")
+                }
+                if let bm = bookmarks.insert(name <- "test 2", url <- "http://kylejm.io", categoryFK <- cat) {
+                    println("woot!")
+                }
+            }
+            
+            let results = bookmarks.join(categories, on: categories[categoryID] == bookmarks[categoryFK])
+            for result in results {
+                println(result[bookmarks[name]])
             }
         }
         
