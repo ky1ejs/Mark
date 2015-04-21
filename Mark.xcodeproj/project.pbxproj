@@ -13,25 +13,13 @@
 		AF1DAA5F1ADA838B00C89445 /* AddEditBookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */; };
 		AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */; };
 		AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */; };
-		AF1DAA651ADA840B00C89445 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA631ADA840B00C89445 /* Bolts.framework */; };
-		AF1DAA661ADA840B00C89445 /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA641ADA840B00C89445 /* ParseOSX.framework */; };
 		AF1DAA681ADA842F00C89445 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */; };
-		AF1DAA6A1ADA843400C89445 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA691ADA843400C89445 /* ApplicationServices.framework */; };
-		AF1DAA6C1ADA845D00C89445 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6B1ADA845D00C89445 /* Security.framework */; };
-		AF1DAA6E1ADA846C00C89445 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6D1ADA846C00C89445 /* QuartzCore.framework */; };
-		AF1DAA701ADA847600C89445 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA6F1ADA847600C89445 /* CoreLocation.framework */; };
-		AF1DAA721ADA848500C89445 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA711ADA848500C89445 /* CoreGraphics.framework */; };
-		AF1DAA741ADA848B00C89445 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA731ADA848B00C89445 /* CFNetwork.framework */; };
-		AF1DAA761ADA84A800C89445 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA751ADA84A800C89445 /* libz.dylib */; };
-		AF1DAA781ADA84D200C89445 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */; };
 		AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */; };
 		AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */; };
 		AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */; };
 		AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */; };
 		AFBE2B1B1ADC2986009A0687 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B1A1ADC2986009A0687 /* Bookmark.swift */; };
 		AFBE2B1D1ADC2A65009A0687 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B1C1ADC2A65009A0687 /* Tag.swift */; };
-		AFBE2B1F1ADC3D21009A0687 /* ParseOSX.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = AF1DAA641ADA840B00C89445 /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFBE2B201ADC3D21009A0687 /* Bolts.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = AF1DAA631ADA840B00C89445 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFFFB8C01ADF12BC00DFFEA4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB8BF1ADF12BC00DFFEA4 /* Category.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +75,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFBE2B1F1ADC3D21009A0687 /* ParseOSX.framework in Copy Files */,
-				AFBE2B201ADC3D21009A0687 /* Bolts.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,8 +92,6 @@
 		AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditBookmarkVC.swift; sourceTree = "<group>"; };
 		AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
 		AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTVC.swift; sourceTree = "<group>"; };
-		AF1DAA631ADA840B00C89445 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		AF1DAA641ADA840B00C89445 /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseOSX.framework; sourceTree = "<group>"; };
 		AF1DAA671ADA842F00C89445 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF1DAA691ADA843400C89445 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		AF1DAA6B1ADA845D00C89445 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -117,7 +101,6 @@
 		AF1DAA731ADA848B00C89445 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AF1DAA751ADA84A800C89445 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AF1DAA791ADA84E000C89445 /* Mark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Mark-Bridging-Header.h"; path = "../Mark/Mark-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCredentials.swift; sourceTree = "<group>"; };
 		AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWindow.xib; sourceTree = "<group>"; };
@@ -134,17 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1DAA781ADA84D200C89445 /* SystemConfiguration.framework in Frameworks */,
-				AF1DAA761ADA84A800C89445 /* libz.dylib in Frameworks */,
-				AF1DAA741ADA848B00C89445 /* CFNetwork.framework in Frameworks */,
-				AF1DAA721ADA848500C89445 /* CoreGraphics.framework in Frameworks */,
-				AF1DAA701ADA847600C89445 /* CoreLocation.framework in Frameworks */,
-				AF1DAA6E1ADA846C00C89445 /* QuartzCore.framework in Frameworks */,
-				AF1DAA6C1ADA845D00C89445 /* Security.framework in Frameworks */,
-				AF1DAA6A1ADA843400C89445 /* ApplicationServices.framework in Frameworks */,
 				AF1DAA681ADA842F00C89445 /* libsqlite3.dylib in Frameworks */,
-				AF1DAA651ADA840B00C89445 /* Bolts.framework in Frameworks */,
-				AF1DAA661ADA840B00C89445 /* ParseOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				AFEA13231AE421C600A23C1E /* SQLite.xcodeproj */,
-				AF1DAA791ADA84E000C89445 /* Mark-Bridging-Header.h */,
-				AF1DAA641ADA840B00C89445 /* ParseOSX.framework */,
-				AF1DAA631ADA840B00C89445 /* Bolts.framework */,
 				AF1DAA771ADA84D200C89445 /* SystemConfiguration.framework */,
 				AF1DAA751ADA84A800C89445 /* libz.dylib */,
 				AF1DAA731ADA848B00C89445 /* CFNetwork.framework */,
@@ -530,7 +500,7 @@
 				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Mark/Mark-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -549,7 +519,7 @@
 				INFOPLIST_FILE = Mark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Mark/Mark-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

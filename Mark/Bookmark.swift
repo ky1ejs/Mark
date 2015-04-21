@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 kylejm. All rights reserved.
 //
 
+import Cocoa
 import SQLite
 
 let bookmarkTableName = "Bookmarks"
