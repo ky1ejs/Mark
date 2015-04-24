@@ -23,6 +23,19 @@ class Bookmark {
     var URLString : String
     var comment : String?
     
+    static func initialiseTable(db : Database) {
+        let bookmarks = db[bookmarkTableName]
+        let categories = Category.initialiseTable(db)
+        db.create(table: bookmarks, ifNotExists: true) { t in
+            t.column(bookmarkIDColumn, primaryKey: .Autoincrement)
+            t.column(bookmarkNameColumn)
+            t.column(bookmarkURLColumn)
+            t.column(bookmarkCommentColumn)
+            t.column(bookmarkCategoryColumn)
+            t.foreignKey(bookmarkCategoryColumn, references: categories[Category.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
+        }
+    }
+    
     static func bookmarksFromQuery(query : Query) -> [Bookmark] {
         var bookmarks = [Bookmark]()
         for row in query {
