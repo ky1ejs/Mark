@@ -23,13 +23,13 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
             return
         }
         
-        let bookmarks = db[bookmarkTableName]
+        let bookmarks = db[Bookmark.tableName]
         
         var setters = [Setter]()
-        setters.append(bookmarkNameColumn <- self.titleTF.stringValue)
-        setters.append(bookmarkURLColumn <- self.urlTF.stringValue)
+        setters.append(Bookmark.nameColumn <- self.titleTF.stringValue)
+        setters.append(Bookmark.URLColumn <- self.urlTF.stringValue)
         if (count(self.commentTF.stringValue) > 0) {
-            setters.append(bookmarkCommentColumn <- self.commentTF.stringValue)
+            setters.append(Bookmark.commentColumn <- self.commentTF.stringValue)
         }
         
 //        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
@@ -54,7 +54,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         self.titleTF.becomeFirstResponder()
         
         if let bmID = bookmarks.insert(setters) {
-            let bm = Bookmark(row: bookmarks.filter(bookmarkIDColumn == bmID).first!)
+            let bm = Bookmark(row: bookmarks.filter(Bookmark.idColumn == bmID).first!)
             self.bookmarkTVC.insertBookmark(bm)
         }
         
