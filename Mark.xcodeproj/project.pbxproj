@@ -18,7 +18,6 @@
 		AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */; };
 		AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */; };
 		AFB210111AF012AF009CFFF6 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210101AF012AF009CFFF6 /* Schema.swift */; };
-		AFB210131AF02256009CFFF6 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210121AF02256009CFFF6 /* Table.swift */; };
 		AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +103,6 @@
 		AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCredentials.swift; sourceTree = "<group>"; };
 		AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWindow.xib; sourceTree = "<group>"; };
 		AFB210101AF012AF009CFFF6 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
-		AFB210121AF02256009CFFF6 /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
 		AFEA13231AE421C600A23C1E /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
 		AFEA133B1AE43CBC00A23C1E /* Mark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mark.entitlements; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				AF1DAA5E1ADA838B00C89445 /* BookmarkTVC.swift */,
 				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
 				AFB210101AF012AF009CFFF6 /* Schema.swift */,
-				AFB210121AF02256009CFFF6 /* Table.swift */,
 				AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */,
 				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
 				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
@@ -379,7 +376,6 @@
 				AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */,
 				AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */,
 				AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */,
-				AFB210131AF02256009CFFF6 /* Table.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
