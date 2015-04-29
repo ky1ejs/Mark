@@ -12,7 +12,7 @@ import SQLite
 class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDelegate {
     @IBOutlet weak var titleTF : NSTextField!
     @IBOutlet weak var urlTF : NSTextField!
-    @IBOutlet weak var commentTF : NSTextField!
+    @IBOutlet var commentTV : NSTextView! // Has to be strong otherwise the NSTV inside the scroll view gets released
     @IBOutlet weak var tagsTF : NSTokenField!
     @IBOutlet weak var bookmarkTVC : BookmarkTVC!
     
@@ -29,8 +29,8 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         var setters = [Setter]()
         setters.append(Bookmark.nameColumn <- self.titleTF.stringValue)
         setters.append(Bookmark.URLColumn <- self.urlTF.stringValue)
-        if (count(self.commentTF.stringValue) > 0) {
-            setters.append(Bookmark.commentColumn <- self.commentTF.stringValue)
+        if ((self.commentTV.string != nil && count(self.commentTV.string!) > 0)) {
+            setters.append(Bookmark.commentColumn <- self.commentTV.string!)
         }
         
         var bm : Bookmark?
@@ -130,7 +130,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         self.titleTF.stringValue = ""
         self.urlTF.stringValue = ""
         self.tagsTF.stringValue = ""
-        self.commentTF.stringValue = ""
+        self.commentTV.string = ""
     }
     
 }
