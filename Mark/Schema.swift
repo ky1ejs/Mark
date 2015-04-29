@@ -12,7 +12,6 @@ import AppKit
 private let dbPath = NSHomeDirectory() + "/MarkDatabase"
 
 let db : Database = {
-    NSFileManager.defaultManager().removeItemAtPath(dbPath, error: nil)
     let databaseNeedsInitialising = !NSFileManager.defaultManager().fileExistsAtPath(dbPath)
     let markDB = Database(dbPath) // Creates DB if it doesn't exist
     if (databaseNeedsInitialising) {
