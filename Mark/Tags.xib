@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TagsViewController" customModule="Mark" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Keu-ZL-Dav" id="doK-ta-1Za"/>
+                <outlet property="view" destination="qZA-Yr-edf" id="BjU-MP-Xzp"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <collectionViewItem id="XuA-Nu-8uK"/>
+        <customView id="qZA-Yr-edf">
+            <rect key="frame" x="0.0" y="-2" width="311" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kr-St-c7b">
+                    <rect key="frame" x="0.0" y="0.0" width="311" height="450"/>
+                    <clipView key="contentView" id="IXo-dp-Zz7">
+                        <rect key="frame" x="1" y="1" width="248" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView maxNumberOfRows="2" maxNumberOfColumns="2" id="Keu-ZL-Dav">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="itemPrototype" destination="XuA-Nu-8uK" id="S4B-AE-JhM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Zek-p3-TjD">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="J86-36-Udg">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9kr-St-c7b" firstAttribute="leading" secondItem="qZA-Yr-edf" secondAttribute="leading" id="KOF-Zh-fOe"/>
+                <constraint firstItem="9kr-St-c7b" firstAttribute="top" secondItem="qZA-Yr-edf" secondAttribute="top" id="rFK-3f-IIS"/>
+                <constraint firstAttribute="bottom" secondItem="9kr-St-c7b" secondAttribute="bottom" id="u8V-UF-P52"/>
+                <constraint firstAttribute="trailing" secondItem="9kr-St-c7b" secondAttribute="trailing" id="z7A-6e-YHY"/>
+            </constraints>
+            <point key="canvasLocation" x="395.5" y="390"/>
+        </customView>
+    </objects>
+</document>
