@@ -65,7 +65,7 @@ class Bookmark : SchemaTable {
         db.create(table: bookmarks, ifNotExists: true) { t in
             t.column(idColumn, primaryKey: .Autoincrement)
             t.column(nameColumn)
-            t.column(URLColumn)
+            t.column(URLColumn, unique: true)
             t.column(commentColumn)
             t.column(categoryColumn)
             t.foreignKey(categoryColumn, references: categories[Category.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
@@ -112,7 +112,7 @@ class Category : SchemaTable {
         let categories = db[self.tableName]
         db.create(table: categories, ifNotExists: true) { t in
             t.column(idColumn, primaryKey: .Autoincrement)
-            t.column(nameColumn)
+            t.column(nameColumn, unique: true)
         }
         return categories
     }
@@ -146,7 +146,7 @@ class Tag : SchemaTable {
         let tags = db[self.tableName]
         db.create(table: tags, ifNotExists: true) { t in
             t.column(idColumn, primaryKey: .Autoincrement)
-            t.column(nameColumn)
+            t.column(nameColumn, unique: true)
         }
         return tags
     }
@@ -193,6 +193,7 @@ class BookmarkTag : SchemaTable {
             t.column(tagID)
             t.foreignKey(bookmarkID, references: bookmarks[Bookmark.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
             t.foreignKey(tagID, references: tags[Tag.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
+            t.unique(bookmarkID, tagID)
         }
         return bookmarkTags
     }
