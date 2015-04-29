@@ -17,6 +17,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
     @IBOutlet weak var bookmarkTVC : BookmarkTVC!
     
     weak var activeTF : NSTextField!
+    var tags = [Tag]()
     
     @IBAction func save(sender: NSButton) {
         if (!self.validateFields()) {
@@ -32,32 +33,21 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
             setters.append(Bookmark.commentColumn <- self.commentTF.stringValue)
         }
         
-//        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
-//            for tagName in tags {
-//                let query = Tag.query()!
-//                query.fromLocalDatastore()
-//                query.whereKey("name", equalTo: tagName)
-//                
-//                var tag : Tag! = nil
-//                if let results = query.findObjects() where results.count > 0 {
-//                    tag = results.first as! Tag
-//                } else {
-//                    tag = Tag(className: "Tag")
-//                    tag.name = tagName
-//                }
-//                tag.bookmarks.addObject(bm)
-//                tag.pinInBackgroundWithBlock(nil)
-//            }
-//        }
+        var bm : Bookmark?
+        if let bmID = bookmarks.insert(setters) {
+            bm = Bookmark(row: bookmarks.filter(Bookmark.idColumn == bmID).first!)
+            self.bookmarkTVC.insertBookmark(bm!)
+        }
+        
+        if let tags = self.tagsTF.objectValue as? [String] where tags.count > 0 {
+            for tagName in tags {
+                let tag = Tag.tagWithName(tagName, createIfNotExists: true)
+                BookmarkTag.addTagToBookmark(bm!, tag: tag!)
+            }
+        }
         
         self.resetTextFields()
         self.titleTF.becomeFirstResponder()
-        
-        if let bmID = bookmarks.insert(setters) {
-            let bm = Bookmark(row: bookmarks.filter(Bookmark.idColumn == bmID).first!)
-            self.bookmarkTVC.insertBookmark(bm)
-        }
-        
     }
     
     // mark - Validation
@@ -116,20 +106,19 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
 //    }
     
     func tokenField(tokenField: NSTokenField, completionsForSubstring substring: String, indexOfToken tokenIndex: Int, indexOfSelectedItem selectedIndex: UnsafeMutablePointer<Int>) -> [AnyObject]? {
-//        let query = Tag.query()
-//        query?.fromLocalDatastore()
-//        query?.whereKey("name", hasPrefix: substring)
-//        let results = query?.findObjects()
         var names = [String]()
-//        for tag in results as! [Tag] {
-//            names.append(tag.name)
-//        }
+        for tag in self.tags {
+            if (tag.name as NSString).containsString(substring) {
+                names.append(tag.name)
+            }
+        }
         return names
     }
     
     // mark - Managing the textfields
     
     override func controlTextDidBeginEditing(obj: NSNotification) {
+        self.tags = db.allRecordsForTable(Tag)
         self.activeTF = obj.object as! NSTextField
     }
     

@@ -71,7 +71,7 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
     func fetchAndReload() {
-        self.bookmarks = Bookmark.allBookmarks()
+        self.bookmarks = db.allRecordsForTable(Bookmark)
         self.tableView.reloadData()
     }
 

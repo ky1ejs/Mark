@@ -21,16 +21,29 @@ let db : Database = {
         Category.initialiseTable(markDB)
         Bookmark.initialiseTable(markDB)
         Tag.initialiseTable(markDB)
+        BookmarkTag.initialiseTable(markDB)
     }
     return markDB
 }()
 
 protocol Table {
     static var tableName : String { get }
+    init(row : Row)
 }
 
 private protocol SchemaTable : Table {
     static func initialiseTable(db : Database) -> Query
+}
+
+extension Database {
+    func allRecordsForTable<T: Table>(table : T.Type) -> [T] {
+        let query = self[T.tableName]
+        var results = [T]()
+        for row in query {
+            results.append(T(row: row))
+        }
+        return results
+    }
 }
 
 class Bookmark : SchemaTable {
@@ -67,12 +80,8 @@ class Bookmark : SchemaTable {
         }
         return bookmarks
     }
-    
-    static func allBookmarks() -> [Bookmark] {
-        return bookmarksInQuery(db[tableName])
-    }
 
-    init(row : Row) {
+    required init(row : Row) {
         self.id = row[Bookmark.idColumn]
         self.name = row[Bookmark.nameColumn]
         self.URLString = row[Bookmark.URLColumn]
@@ -100,25 +109,15 @@ class Category : SchemaTable {
     var name : String
     
     private static func initialiseTable(db : Database) -> Query {
-        
         let categories = db[self.tableName]
-        
         db.create(table: categories, ifNotExists: true) { t in
-            t.column(self.idColumn, primaryKey: .Autoincrement)
-            t.column(self.nameColumn)
+            t.column(idColumn, primaryKey: .Autoincrement)
+            t.column(nameColumn)
         }
         return categories
     }
     
-    static func categoriesFromQuery(query : Query) -> [Category] {
-        var categories = [Category]()
-        for row in query {
-            categories.append(Category(row: row))
-        }
-        return categories
-    }
-    
-    init(row : Row) {
+    required init(row : Row) {
         self.id = row[Category.idColumn]
         self.name = row[Category.nameColumn]
     }
@@ -145,29 +144,75 @@ class Tag : SchemaTable {
     
     private static func initialiseTable(db : Database) -> Query {
         let tags = db[self.tableName]
-        
         db.create(table: tags, ifNotExists: true) { t in
-            t.column(self.idColumn, primaryKey: .Autoincrement)
-            t.column(self.nameColumn)
+            t.column(idColumn, primaryKey: .Autoincrement)
+            t.column(nameColumn)
         }
         return tags
     }
     
-    static func tagsFromQuery(query : Query) -> [Tag] {
-        var tags = [Tag]()
-        for row in query {
-            tags.append(Tag(row: row))
-        }
-        return tags
-    }
-    
-    init(row : Row) {
+    required init(row : Row) {
         self.id = row[Tag.idColumn]
         self.name = row[Tag.nameColumn]
     }
     
-    static func parseClassName() -> String {
-        return "Tag"
+    static func tagWithName(name : String, createIfNotExists : Bool = false) -> Tag? {
+        let tagTable = db[Tag.tableName]
+        let query = tagTable.filter(Tag.nameColumn == name)
+        var tag : Tag?
+        if let row = query.first {
+            tag = Tag(row: row)
+        } else if (createIfNotExists) {
+            if let insertedId = tagTable.insert(Bookmark.nameColumn <- name) {
+                if let row = tagTable.filter(Tag.idColumn == insertedId).first {
+                    tag = Tag(row: row)
+                }
+            }
+        }
+        return tag
     }
+}
+
+class BookmarkTag : SchemaTable {
+    static let tableName = "BookmarkTag"
+    static let idColumn = Expression<Int64>("bookmark_tag_id")
+    static let bookmarkID = Expression<Int64>("bookmark_id")
+    static let tagID = Expression<Int64>("tag_id")
+    
+    let id : Int64
+    let bookmarkID : Int64
+    let tagID : Int64
+    
+    private static func initialiseTable(db: Database) -> Query {
+        let bookmarkTags = db[tableName]
+        let bookmarks = Bookmark.initialiseTable(db)
+        let tags = Tag.initialiseTable(db)
+        db.create(table: bookmarkTags, ifNotExists: true) { t in
+            t.column(idColumn, primaryKey: .Autoincrement)
+            t.column(bookmarkID)
+            t.column(tagID)
+            t.foreignKey(bookmarkID, references: bookmarks[Bookmark.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
+            t.foreignKey(tagID, references: tags[Tag.idColumn], update: SchemaBuilder.Dependency.Cascade, delete: SchemaBuilder.Dependency.Cascade)
+        }
+        return bookmarkTags
+    }
+    
+    static func addTagToBookmark(bm : Bookmark, tag : Tag) -> BookmarkTag? {
+        let query = db[tableName]
+        var bt : BookmarkTag?
+        if let insertedID = query.insert(bookmarkID <- bm.id, tagID <- tag.id) {
+            if let row = query.filter(idColumn == insertedID).first {
+                bt = BookmarkTag(row: row)
+            }
+        }
+        return bt
+    }
+    
+    required init(row: Row) {
+        self.id = row[BookmarkTag.idColumn]
+        self.bookmarkID = row[BookmarkTag.bookmarkID]
+        self.tagID = row[BookmarkTag.tagID]
+    }
+    
 }
 
