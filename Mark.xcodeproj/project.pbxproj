@@ -17,6 +17,8 @@
 		AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */; };
 		AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */; };
 		AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */; };
+		AF2AE24B1AFB4E6200EAE502 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEA13441AE43FF900A23C1E /* SQLite.framework */; };
+		AF2AE24E1AFB4E7500EAE502 /* SQLite.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = AFEA13441AE43FF900A23C1E /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFB210111AF012AF009CFFF6 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210101AF012AF009CFFF6 /* Schema.swift */; };
 		AFB210161AF07990009CFFF6 /* Tags.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB210151AF07990009CFFF6 /* Tags.xib */; };
 		AFB210181AF07A01009CFFF6 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210171AF07A01009CFFF6 /* TagsViewController.swift */; };
@@ -30,6 +32,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AF1DAA3B1ADA831B00C89445;
 			remoteInfo = Mark;
+		};
+		AF2AE24C1AFB4E6A00EAE502 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFEA13231AE421C600A23C1E /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC3773F219C8CBB3004FCF85;
+			remoteInfo = SQLite;
 		};
 		AFEA13431AE43FF900A23C1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -75,6 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AF2AE24E1AFB4E7500EAE502 /* SQLite.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2AE24B1AFB4E6200EAE502 /* SQLite.framework in Frameworks */,
 				AF1DAA681ADA842F00C89445 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +251,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AF2AE24D1AFB4E6A00EAE502 /* PBXTargetDependency */,
 			);
 			name = Mark;
 			productName = Mark;
@@ -402,6 +414,11 @@
 			isa = PBXTargetDependency;
 			target = AF1DAA3B1ADA831B00C89445 /* Mark */;
 			targetProxy = AF1DAA4D1ADA831B00C89445 /* PBXContainerItemProxy */;
+		};
+		AF2AE24D1AFB4E6A00EAE502 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite;
+			targetProxy = AF2AE24C1AFB4E6A00EAE502 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
