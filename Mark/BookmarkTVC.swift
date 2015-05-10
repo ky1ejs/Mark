@@ -12,15 +12,6 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     var bookmarks = [Bookmark]()
     @IBOutlet weak var tableView : NSTableView!
     @IBOutlet weak var detailView : BookmarkDetailViewController!
-    
-    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
