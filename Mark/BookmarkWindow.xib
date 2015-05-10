@@ -56,19 +56,19 @@
                                                                     <rect key="frame" x="1" y="1" width="293" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="boa-4f-dKF">
-                                                                            <rect key="frame" x="6" y="8" width="269" height="17"/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="NDL-Uj-fjt">
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-As-7tU" userLabel="URL Name Label">
+                                                                            <rect key="frame" x="6" y="27" width="269" height="17"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="URL Name" id="PUC-4O-6cn">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" red="0.3977667298" green="0.3977667298" blue="0.3977667298" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-As-7tU">
-                                                                            <rect key="frame" x="6" y="27" width="269" height="17"/>
-                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="PUC-4O-6cn">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="boa-4f-dKF" userLabel="URL Label">
+                                                                            <rect key="frame" x="6" y="8" width="269" height="17"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL" id="NDL-Uj-fjt">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" red="0.3977667298" green="0.3977667298" blue="0.3977667298" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>

@@ -48,6 +48,18 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
         return 60
     }
     
+    func tableViewSelectionIsChanging(notification: NSNotification) {
+        tableView.enumerateAvailableRowViewsUsingBlock { (rowView : NSTableRowView!, rowIndex : Int) -> Void in
+            let viewForRow = rowView.viewAtColumn(0) as! BookmarkCell
+            if rowView.selected {
+                viewForRow.urlTextField.textColor = NSColor(calibratedRed:0.678431, green:0.678431, blue:0.678431, alpha:1.0)
+            } else {
+                viewForRow.urlTextField.textColor = NSColor(calibratedRed:0.313725, green:0.313725, blue:0.313725, alpha:1.0)
+            }
+            
+        }
+    }
+    
     func insertBookmark(bm : Bookmark) {
         self.bookmarks.insert(bm, atIndex: 0)
         self.tableView.insertRowsAtIndexes(NSIndexSet(index: 0), withAnimation: NSTableViewAnimationOptions.SlideDown)
@@ -64,7 +76,6 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
                 }
                 self.tableView.selectRowIndexes(NSIndexSet(index: rowToSelect), byExtendingSelection: false)
             }
-//            self.bookmarks[rowIndex].unpinInBackgroundWithBlock(nil)
             self.bookmarks.removeAtIndex(rowIndex)
             self.tableView.removeRowsAtIndexes(NSIndexSet(index: rowIndex), withAnimation: NSTableViewAnimationOptions.EffectFade)
         }

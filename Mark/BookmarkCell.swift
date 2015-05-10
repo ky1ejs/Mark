@@ -9,7 +9,7 @@
 import Cocoa
 
 class BookmarkCell : NSTableCellView {
-    @IBOutlet private var urlTextField : NSTextField!
+    @IBOutlet private(set) var urlTextField : NSTextField!
     
     var bookmark : Bookmark! {
         didSet {
