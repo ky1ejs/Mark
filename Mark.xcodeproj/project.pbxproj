@@ -19,6 +19,8 @@
 		AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */; };
 		AF2AE24B1AFB4E6200EAE502 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEA13441AE43FF900A23C1E /* SQLite.framework */; };
 		AF2AE24E1AFB4E7500EAE502 /* SQLite.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = AFEA13441AE43FF900A23C1E /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFAB1D5D1AFFD4ED003D054E /* BookmarkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB1D5B1AFFD4ED003D054E /* BookmarkDetailViewController.swift */; };
+		AFAB1D5E1AFFD4ED003D054E /* BookmarkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAB1D5C1AFFD4ED003D054E /* BookmarkDetailViewController.xib */; };
 		AFB210111AF012AF009CFFF6 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210101AF012AF009CFFF6 /* Schema.swift */; };
 		AFB210161AF07990009CFFF6 /* Tags.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB210151AF07990009CFFF6 /* Tags.xib */; };
 		AFB210181AF07A01009CFFF6 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB210171AF07A01009CFFF6 /* TagsViewController.swift */; };
@@ -114,6 +116,8 @@
 		AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		AF1DAA821ADA9AF800C89445 /* ParseCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCredentials.swift; sourceTree = "<group>"; };
 		AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWindow.xib; sourceTree = "<group>"; };
+		AFAB1D5B1AFFD4ED003D054E /* BookmarkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkDetailViewController.swift; sourceTree = "<group>"; };
+		AFAB1D5C1AFFD4ED003D054E /* BookmarkDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkDetailViewController.xib; sourceTree = "<group>"; };
 		AFB210101AF012AF009CFFF6 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		AFB210151AF07990009CFFF6 /* Tags.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tags.xib; sourceTree = "<group>"; };
 		AFB210171AF07A01009CFFF6 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				AFBE2B181ADC2782009A0687 /* BookmarkTable.swift */,
 				AF1DAA5D1ADA838B00C89445 /* BookmarkCell.swift */,
 				AF1DAA5C1ADA838B00C89445 /* AddEditBookmarkVC.swift */,
+				AFAB1D5B1AFFD4ED003D054E /* BookmarkDetailViewController.swift */,
+				AFAB1D5C1AFFD4ED003D054E /* BookmarkDetailViewController.xib */,
 				AFB210101AF012AF009CFFF6 /* Schema.swift */,
 				AF1DAA801ADA8A0C00C89445 /* MainMenu.xib */,
 				AF1DAA841ADAF69200C89445 /* BookmarkWindow.xib */,
@@ -371,6 +377,7 @@
 				AF1DAA441ADA831B00C89445 /* Images.xcassets in Resources */,
 				AF1DAA811ADA8A0C00C89445 /* MainMenu.xib in Resources */,
 				AF1DAA851ADAF69200C89445 /* BookmarkWindow.xib in Resources */,
+				AFAB1D5E1AFFD4ED003D054E /* BookmarkDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +402,7 @@
 				AF1DAA601ADA838B00C89445 /* BookmarkCell.swift in Sources */,
 				AF1DAA611ADA838B00C89445 /* BookmarkTVC.swift in Sources */,
 				AFBE2B191ADC2782009A0687 /* BookmarkTable.swift in Sources */,
+				AFAB1D5D1AFFD4ED003D054E /* BookmarkDetailViewController.swift in Sources */,
 				AF1DAA831ADA9AF800C89445 /* ParseCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

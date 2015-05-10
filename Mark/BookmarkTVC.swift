@@ -11,6 +11,7 @@ import Cocoa
 class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     var bookmarks = [Bookmark]()
     @IBOutlet weak var tableView : NSTableView!
+    @IBOutlet weak var detailView : BookmarkDetailViewController!
     
     override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -58,6 +59,11 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
             }
             
         }
+    }
+    
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        let selectedBm = self.bookmarks[self.tableView.selectedRow]
+        self.detailView.bookmark = selectedBm
     }
     
     func insertBookmark(bm : Bookmark) {

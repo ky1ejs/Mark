@@ -16,12 +16,12 @@ let db : Database = {
     let markDB = Database(dbPath) // Creates DB if it doesn't exist
     if (databaseNeedsInitialising) {
         markDB.foreignKeys = true
-        markDB.trace(println)
         Category.initialiseTable(markDB)
         Bookmark.initialiseTable(markDB)
         Tag.initialiseTable(markDB)
         BookmarkTag.initialiseTable(markDB)
     }
+    markDB.trace(println)
     return markDB
 }()
 
