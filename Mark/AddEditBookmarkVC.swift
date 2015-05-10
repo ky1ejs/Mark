@@ -34,7 +34,7 @@ class AddEditBookmarkVC : NSViewController, NSTextFieldDelegate, NSTokenFieldDel
         }
         
         var bm : Bookmark?
-        if let bmID = bookmarks.insert(setters) {
+        if let bmID = bookmarks.insert(setters).rowid {
             bm = Bookmark(row: bookmarks.filter(Bookmark.idColumn == bmID).first!)
             self.bookmarkTVC.insertBookmark(bm!)
         }

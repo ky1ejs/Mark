@@ -123,7 +123,7 @@ class Category : SchemaTable {
     
     init(name : String, db : Database) {
         let categories = db[Category.tableName]
-        if let insertedId = categories.insert(Category.nameColumn <- name) {
+        if let insertedId = categories.insert(Category.nameColumn <- name).rowid {
             self.id = insertedId
             self.name = name
         } else {
@@ -162,7 +162,7 @@ class Tag : SchemaTable {
         if let row = query.first {
             tag = Tag(row: row)
         } else if (createIfNotExists) {
-            if let insertedId = tagTable.insert(Bookmark.nameColumn <- name) {
+            if let insertedId = tagTable.insert(Bookmark.nameColumn <- name).rowid {
                 if let row = tagTable.filter(Tag.idColumn == insertedId).first {
                     tag = Tag(row: row)
                 }
@@ -200,7 +200,7 @@ class BookmarkTag : SchemaTable {
     static func addTagToBookmark(bm : Bookmark, tag : Tag) -> BookmarkTag? {
         let query = db[tableName]
         var bt : BookmarkTag?
-        if let insertedID = query.insert(bookmarkID <- bm.id, tagID <- tag.id) {
+        if let insertedID = query.insert(bookmarkID <- bm.id, tagID <- tag.id).rowid {
             if let row = query.filter(idColumn == insertedID).first {
                 bt = BookmarkTag(row: row)
             }
