@@ -38,9 +38,8 @@ class BookmarkDetailViewController: NSViewController {
     @IBOutlet weak var urlLabel : NSTextField!
     @IBOutlet weak var tagsTokenField : NSTokenField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
-    
+  
+  @IBAction func openURLButtonClicked(sender : AnyObject?) {
+    self.bookmark?.openURL()
+  }
 }
