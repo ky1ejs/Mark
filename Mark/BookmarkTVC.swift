@@ -53,8 +53,11 @@ class BookmarkTVC : NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
     func tableViewSelectionDidChange(notification: NSNotification) {
-        let selectedBm = self.bookmarks[self.tableView.selectedRow]
-        self.detailView.bookmark = selectedBm
+      var selectedBm : Bookmark? = nil
+      if (self.tableView.selectedRow > -1) {
+        selectedBm = self.bookmarks[self.tableView.selectedRow]
+      }
+      self.detailView.bookmark = selectedBm
     }
     
     func insertBookmark(bm : Bookmark) {
