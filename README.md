@@ -1,3 +1,18 @@
+# I no longer work on this
+
+...because I found out about [Pocket](http://getpocket.com), which does everything I want (except from directory based storage which is pretty minor).
+
+It was good to do this project at least to practice Swfit and AppKit dev. Things I learnt:
+
+- Always speak to lots of people before getting really stuck in to a project - I found out about Pocket from [Joe Burgess](https://twitter.com/jmburges). It would have taken me ages to make something like Pocket on my own and would have distracted me from other things, which some will argue is good, but in this case I'm just glad to be getting on with organising my urls
+- [SQLite.swift](https://github.com/stephencelis/SQLite.swift), which is so awesome
+- A bit of AppKit
+- and practiced Swift
+- 
+
+<br>
+<br>
+
 ##Why?
 
 I've never made a Mac app and I thought it was a nice idea to learn Swift whilst also making my first Mac app (I am playing with Swift on iOS too, of course).
