@@ -8,8 +8,9 @@ It was good to do this project at least to practice Swfit and AppKit dev. Things
 - [SQLite.swift](https://github.com/stephencelis/SQLite.swift), which is so awesome
 - A bit of AppKit
 - and practiced Swift
-- 
 
+<br>
+<br>
 <br>
 <br>
 
